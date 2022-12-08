@@ -981,7 +981,30 @@
 	\section{Portfolio Theory}
 	\section{Practical Code}
 	\section{Data}
+	
 	\section{Stochastic Partial Differential Equations}
+	\section{Differential Equations}
+	
+	\begin{definition}
+		A simple ordinary differential equation is an uple $P = (J, U, \Lambda, \nu)$ where $J \subset \bb{R}$ is an interval, $U \subset \bb{R}^n$ is open, $\Lambda \subset \bb{R}^m$ is any set and $\nu:J \times \Lambda \raw U$ is any map. 
+	\end{definition}
+	
+	The set $J$ is the interval of definition of the differential equation, $U$ is domain of definition, $\Lambda$ is a parameter space and $\nu$ gives the equation the derivative of the unknown function has to satisfy: $f'(x) = \nu(x)$.
+	
+	We make the convention that if the equation does not depend on a variable parameter $\lambda$, $\Lambda = \{0\}$, and $\nu: J \raw U$, instead of $\nu:J \times \Lambda \raw U$.
+
+	We can rewrite the classical form of writing differential equations in this language, so that for example $x = x(t), f'(x) = x, t \in J$ becomes $(J, \bb{R}, \emptyset, \text{id} )$.  
+	
+	\begin{definition}
+		Let $P = (J, U, \Lambda, \nu)$ be a simple ODE, and let $\lambda \in \Lambda$. A solution with parameter $\lambda$ of $P$ is a map $f: J \raw U$ such that 
+		
+		\begin{center}
+			$f'(t) = \nu(t, \lambda)$ for all $t \in J$, \ie, $f' = \nu(\cdot, \lambda)$.
+		\end{center}
+	\end{definition}
+
+	
+	
 	\section{Optimization and Control}
 		\subsection{Polyhedral Sets}
 		\subsection{Convexity}
@@ -1017,16 +1040,16 @@
 		
 		
 		\begin{exmp}
-			Let $x \in \bb{R}^n$, $r \geq 0$. Then $B(x,r)$ is convex			
+			If $V$ is normed then for all $x \in V$, $r \geq 0$, $B(x,r)$ is convex			
 		\end{exmp}
 	
 	
 		\begin{exmp}
-				
+			Every linear subspace $W$ of $V$ is convex.
 		\end{exmp}
 
 		\begin{exmp}
-	
+			
 		\end{exmp}
 
 		\begin{definition}
@@ -1058,13 +1081,26 @@
 			
 		\end{definition}
 
-
+		\begin{definition}
+			The epigraph of a map $f: V \raw W$
+		\end{definition}
 
 
 		\subsection{Duality}
 		\subsection{}
 	
+		\subsection{Optimization}
+		
+		
+		\begin{definition}
+			An optimization problem is an uple $P = ( J, D )$ where $D \subset \bb{R}$ and $J: D \raw \bb{R}_\infty $ is a function.  
+		\end{definition}	
+
+		For us, an optimization problem is a minimization problem, since maximization problems can always be solved by switching $J$ with $-J$.
 	
+		\begin{definition}
+			Let $P = (J, D)$ be an optimization problem. A solution to $P$ is a point $\bar{x} \in D$ such that $J(\bar{x}) \leq J(x)$ for all $x \in D$.
+		\end{definition}
 	
 	
 	
