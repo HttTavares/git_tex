@@ -50,5 +50,5 @@
 \contentsline {section}{\numberline {35}Optimization and Control}{19}%
 \contentsline {subsection}{\numberline {35.1}Polyhedral Sets}{19}%
 \contentsline {subsection}{\numberline {35.2}Convexity}{19}%
-\contentsline {subsection}{\numberline {35.3}Duality}{19}%
-\contentsline {subsection}{\numberline {35.4}}{19}%
+\contentsline {subsection}{\numberline {35.3}Duality}{20}%
+\contentsline {subsection}{\numberline {35.4}}{20}%
