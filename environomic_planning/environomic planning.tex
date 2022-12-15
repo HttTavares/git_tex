@@ -1087,7 +1087,51 @@
 
 
 		\subsection{Duality}
-		\subsection{}
+		\subsection{Cones}
+	
+		\begin{definition}
+			Let $V$ be a vector space. A cone is a subset $C$ such that 
+			
+			\begin{center}
+				$x \in C, t > 0 \implies tx \in C$ 
+			\end{center}
+			
+		\end{definition}
+	
+		\begin{definition}
+			Let $x \in D \subset V$. We say that $v \in V$ is a viable direction with respect to $D$ at $x$ if 
+			
+			\begin{center}
+				$\exists \epsilon > 0$ such that for all $t \in [0, \epsilon], x + tv \in D$ .
+			\end{center}
+		
+			We call the set of all viable directions with respect to $D$ at $x$ by $\mathcal{V}_D(x) $.  
+		\end{definition}
+	
+		\begin{exmp}
+			Let $S^{n-1}$ be the $n$-sphere in $\bb{R}^{n}$, and let $x = (0, ..., 0, 1)$ be the north pole. Then $\mathcal{V}_D(x) = \{ (x_i);  x_{n} < 0  \}$.
+		\end{exmp}
+		
+		\begin{definition}
+			Let $f: D \raw \bb{R}$ with $ D \subset V $. We say that $v \in V$ is a direction of descent of $f$ when $v$ is a viable 
+			direction wrt $D$ at $x$ and 
+			
+			\begin{center}
+				$\exists \epsilon > 0$ such that for all $t \in [0, \epsilon], f(x + tv) \leq f(x)$ .
+			\end{center}
+			
+			The set of all directions of descent for $f$ at $x$ is denoted $\mathcal{D}_f(x)$
+		\end{definition}
+	
+		\begin{lemma}
+			Let $x \in D \in V$ and $ f: D \raw \bb{R} $ be a function. Then the following sets are cones.
+			
+			\begin{enumerate}
+				\item $\mathcal{V}_D(x)$,
+			 	
+				\item $ \mathcal{D}_f(x) $,
+			\end{enumerate}
+		\end{lemma}
 	
 		\subsection{Optimization}
 		
@@ -1102,7 +1146,7 @@
 			Let $P = (J, D)$ be an optimization problem. A solution to $P$ is a point $\bar{x} \in D$ such that $J(\bar{x}) \leq J(x)$ for all $x \in D$.
 		\end{definition}
 	
-	
+		
 	
 	
 \end{document}

@@ -1,0 +1,175 @@
+\documentclass[]{article}
+
+%opening
+
+
+\title{Modelagem de Impactos e Custos Logísticos do Grande Varejo/Atacado no Brasil}
+\author{Henrique Teixeira Tyrrell Tavares}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+\section{}
+
+
+	
+%	\begin{center}
+%		\textbf{CPF - 11437408745}
+%		
+%		\textbf{Email - htt.tavares@gmail.com}
+%	\end{center}
+%	
+	
+	
+	\begin{abstract}
+		Discutiremos as principais questões sociais, econômicas e ambientais de logística do grande varejo ou atacado, levando em consideração as diferenças entre os diversos setores da economia com grande atuação logística. Modelamos, então, as principais variáveis da logística do varejo/atacado em um diagrama de enlace causal com o objetivo de construir as bases conceituais para uma futura simulação numérica baseada em dados de transporte. 
+	\end{abstract}
+	
+	\textit{Palavras-Chave}: Transporte, Armazenamento, Entrega, Logística.
+	
+	\section{Introdução}
+	
+	O transporte e o armazenamento de diversos setores industriais costumam ser subestimados em termos de impacto ambiental e são rotineiramente mal compreendidos. Por outro lado, oferecem uma oportunidade de diminuição de custos ao usar metdologias de otimização logística. 
+	
+	Um dos fatores que altera muito o regime logísticos das empresas é a durabilidade do produto transportado. 
+	
+	De um lado dos extremos da durabilidade, temos produtos agrícolas orgânicos, isto é, que produtos agrícolas em cuja produção não são usados defensivos ou produtos químicos conservantes. Do outro lado, produtos de bricolagem tendem a durar mais e se não vendidos, atravancam a circulação de bens em centros de distribuição 
+	
+	A pandemia teve como uma de suas consequências um grande aumento da digitalização de processos e compras online, tornando o potencial de redução de danos e custos da otimização logística maior ainda. 
+	
+	\section{Objetivos}
+	
+	O principal objetivo deste trabalho é identificar o potencial de redução de custos, tempo e impactos ambientais das cadeias logísticas do grande varejo e atacado no Brasil. 
+	
+	Práticas de otimização logística já estão presentes nos maiores varejistas e atacadistas, baseadas em diferentes metodologias como pesquisa operacional, teoria de redes, e até intuição por experiência. Alguns trabalhos já procuraram estimar o ganho econômico a partir da diminuição da perda de atacados e varejos específicos, mas ainda não há estudo geral. 
+	
+	Há poucos estudos que discutem a diminuição de impactos ambientais logístico, com no máximo estimativas. Não há, também, estudos que discutem a capacidade de otimização, nem a diminuição do tempo médio de transporte. Um outro fator que não foi estudado ainda é o ganho de vendas por melhor circulação de produtos pelo armazenamento ótimo. 
+	
+	Vamos nos ater ao grande varejo/atacado pois ele segue padrões venda e logística mais regulares do que os de pequeno e médio porte. Além disso não investigaremos a alternativa ferroviária ou hidroviária por obedecerem a dinâmicas de mercado e materiais muito distintas da transporte rodoviário.
+	
+	\section{Metodologia}
+	
+	Propomos então a utilização da metodologia do pensamento sistêmico para delimitação do problema e da dinâmica de sistemas para mensuração das capacidades mencionadas anteriormente.
+	
+	Em primeiro lugar, para fazer um modelo abstrato do problema, criaremos um diagrama de enlace causal explicitando as principais variáveis exógenas e endógenas do sistema e suas relações dinâmicas de causa e efeito. Isto nos permitirá comparar situações com diferentes níveis de atuação do grande varejo.
+	
+	Em segundo lugar coletaremos os dados históricos necessários para estimar as características essenciais do modelo. Serão necessários dados sobre custo e duração de fretes, malha rodoviária, consumo, 
+	
+	Ao final, para a simulação numérica da dinâmica de sistemas proveniente do modelo gerado anteriormente junto dos dados coletados, poderemos simular cenários distintos de atuação. Será também possível estimar a responsabilidade deste setor nas cadeias de valor nacionais ao compará-lo com cenários onde sua atuação é reduzida. Em seguida estimaremos as perdas decorrente da suboptimalidade das operações de varejo a partir de dados concretos nacionais.
+	
+	
+	
+	\section{Modelo}
+	
+	
+	Fizemos um diagrama de enlace causal das variáveis mais importantes para o nosso problema. Ele basicamente mostra que os varejistas/atacadistas têm basicamente duas maneiras de levar o produto ao consumidor, a saber a Venda Direta e a Venda Indireta. 
+	
+	
+	\subsection{Venda Indireta}
+	
+	
+	
+	
+	A venda indireta consiste em comprar do produtor e reter o produto fisicamente em um ou mais armazéns e por conseguinte também a propriedade do produto, até que seja vendido por algum canal de vendas do varejista/atacadista. Isto implica em pelo menos dois transportes do produto, a saber do fornecedor/produtor ao armazém e do armazém ao consumidor final. Este tipo de venda é mais comum e tende a ser simples de se realizar para o grande varejo/atacado, porém tende a implicar em mais perdas, custos e impactos ambientais.
+	
+	Alguns exemplos contundentes no Brasil, os quais estamos interessados em modelar são: 
+	
+	\begin{enumerate}
+		\item Supermercados
+		\item Os \textit{marketplaces online}
+		\item Bricolagem
+		\item Lojas de Conveniência
+		\item Eletroeletrônicos e eletrodomésticos 
+	\end{enumerate}
+	
+	\subsection{Venda Direta}
+	
+	A venda direta é uma modalidade de venda mais antiga, onde o produtor/fornecedor do produto vende diretamente ao consumidor final. É minoria em quase todas as sociedades de mercado modernas. Ela tende a ser menos danosa, custosa e arriscada, porém tem limitações logísticas e de ciclos dinâmicas de oferta e demanda que impossibilitam, pelo menos no arranjo atual do sistema econômico, que seja a forma dominante de venda. 
+	
+	Por outro lado, existe a uma tendência mais recente do grande varejo apoiado pelas empresas de tecnologia de têm começado a investir na utilização da entrega direta, método que se assemelha em muito à venda direta, e para todos os efeitos podem ser consideradas equivalentes. A diferença é que enquanto a venda direta não inclui um atravessador sendo apenas uma transação entre produtor/fornecedor e consumidor, enquanto a entrega direta passa pela cadeia logística de transporte do grande atravessador.
+	
+	\newpage 
+	
+%	\begin{figure}
+%		% \centering
+%		\includegraphics[width=1.0\textwidth]{Modelo Vendas.png}
+%		\caption{\label{fig:frog}Modelo de Vendas.}
+%	\end{figure}
+	
+	\subsection{Ciclos de Feedback}
+	
+	Vamos discutir os principais circuitos. 
+	
+	\subsubsection{Venda Direta}
+	\begin{center}
+		$\textbf{Compra de Novos Produtos} \rightarrow \textbf{Transporte Direto} \rightarrow \textbf{Venda} \rightarrow \textbf{Ganhos} \rightarrow \textbf{Compra}$
+	\end{center}
+	
+	Este ciclo é de reforço.
+	
+	Essa é a maneira mais antiga de se vender. O fornecedor/produtor leva seu produto até o consumidor e o vende ali mesmo. Na dinâmica de mercado atual, não é mais possível satisfazer todas as necessidades de consumo desta maneira. Por outro lado esta maneira gera menos perdas e portanto menos custo e impacto ambiental, além de menos travamento logístico.
+	
+	\subsubsection{Venda Indireta}
+	
+	\begin{center}
+		$\textbf{Compra de Novos Produtos} \rightarrow \textbf{Transporte para Armazentamento} \rightarrow \textbf{Armazenado no Varejo} \rightarrow \textbf{Transporte para o Consumidor} \rightarrow \textbf{Venda} \rightarrow \textbf{Ganhos} \rightarrow \textbf{Compra} $
+	\end{center}
+	Este ciclo é de reforço.
+	
+	
+	
+	\subsubsection{Travamento Logístico}
+	
+	\begin{center}
+		$\textbf{Compra de Novos Produtos} \rightarrow \textbf{Transporte para Armazentamento} \rightarrow \textbf{Armazenado no Varejo} \rightarrow \textbf{Espaço no Armazém} \rightarrow \textbf{Compra de Novos Produtos} $
+	\end{center}
+	Este ciclo é de equilíbrio.
+	
+	O problema aqui se dá na eventual incapacidade de vendas e abarrotamento de produtos duráveis no armazém impedindo o fluxo logístico e de vendas.
+	
+	\subsubsection{Rechaço ao Impacto}
+	
+	\begin{center}
+		$\textbf{Compra de Novos Produtos} \rightarrow \textbf{Venda Indireta} \rightarrow \textbf{Perdas} \rightarrow \textbf{Impacto Ambiental} \rightarrow \textbf{Opinião Pública} \rightarrow \textbf{Propensão à Compra} \rightarrow \textbf{Venda} \rightarrow \textbf{Ganhos} \rightarrow \textbf{Compra de Novos Produtos} $
+	\end{center}
+	Este ciclo é de equilíbrio.
+	
+	A questão aqui é que as perdas serão computadas por organismos reguladores e tendem a causar impopularidade da marca e diminuir a propensão à compra dos consumidores.
+	
+	\subsubsection{Rechaço à Demora da Entrega}
+	\begin{center}
+		$\textbf{Compra de Novos Produtos} \rightarrow \textbf{Venda Direto} \rightarrow \textbf{Tempo de Entrega} \rightarrow \textbf{Opinião Pública} \rightarrow \textbf{Propensão à Compra} \rightarrow \textbf{Venda} \rightarrow \textbf{Ganhos} \rightarrow \textbf{Compra de Novos Produtos} $
+	\end{center}
+	Este ciclo é de Reforço.
+	
+	Uma das diferenças entre a venda direta e a indireta é o tempo de entrega, que tende a diminuir a com a venda direta e portanto melhorar a opinião pública da marca. 
+	
+	
+	
+	
+	O problema aqui se dá na eventual incapacidade de vendas e abarrotamento de produtos duráveis no armazém impedindo o fluxo logístico e de vendas.
+	
+	
+	
+	
+	\section{Discussão e Conclusões}
+	
+	O impacto ambiental do varejo parece ser subestimado na maioria dos casos. Há indicações porém de que pode ser diminuído fortemente a partir da otimização logística, usando a técnica da entrega direta e otimização das cadeias. É necessário então estimar a capacidade de diminuição de impacto e redução de custos usando as técnicas baseadas em novas tecnologias. É de se esperar também que essas otimizações e melhorias aumentem também a propensão à compra do consumidor.
+	
+	A maior conclusão que podemos chegar com esse trabalho é que a venda direta tem vantagens econômicas e ambientais que justificam o investimento por parte das empresas do varejo/atacado a aumentar sua proporção nas operações de logística, principalmente usando tecnologia e ciência no processo decisório. Essa vantagem aparece tanto do ponto de vista de custo operacional direto quanto na diminuição da propensão por parte do cliente a utilizar o serviço do varejo, isto é, a custo marginal indireto.
+	
+	
+	
+	%\bibliographystyle{alpha}
+	%\bibliography{sample}
+	
+	
+	
+
+
+\end{document}
