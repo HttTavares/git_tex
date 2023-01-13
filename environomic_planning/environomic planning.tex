@@ -32,7 +32,9 @@
 \newcommand{\oz}{\textbf{o}}
 \newcommand{\mum}{^{-1}}
 \newcommand{\sa}{\overline{\text{span}}}
-
+\newcommand{\ip}[2]{\langle #1, #2\rangle}
+\newcommand{\norm}[1]{\|#1\|}
+			
 
 %opening
 \title{%
@@ -1133,11 +1135,16 @@
 			\end{enumerate}
 		\end{lemma}
 	
+		\begin{proof}
+			Let $v \in \mathcal{V}_D(x), s > 0$. By hypothesis, there is an $\epsilon > 0$ such that $x + tv \in D$, for all $t \in [0, \epsilon]$. consider $\epsilon_0 = \frac{\epsilon}{s}$. For $t \in [0, \epsilon_0]$, we have $st \in [0, \epsilon]$, which means $x + tsv \in D$, and therefore $sv \in \mathcal{V}_D(x)$.  
+			 
+		\end{proof}
+	
 		\subsection{Optimization}
 		
 		
 		\begin{definition}
-			An optimization problem is an uple $P = ( J, D )$ where $D \subset \bb{R}$ and $J: D \raw \bb{R}_\infty $ is a function.  
+			An optimization problem is a pair $P = ( J, D )$ where $D \subset \bb{R}^n$ and $J: D \raw \bb{R}_\infty $ is a function.  
 		\end{definition}	
 
 		For us, an optimization problem is a minimization problem, since maximization problems can always be solved by switching $J$ with $-J$.
@@ -1147,6 +1154,89 @@
 		\end{definition}
 	
 		
+	\begin{proposition}
+		Let $P = (J, D)$ be an optimization problem, and $s_* \in Sol(P)$. If $J$ is differentiable in a neighborhood of $s_*$, then $J'(s_*) = 0$.  
+	\end{proposition}
+	
+	\begin{proof}
+		Suppose $J'(s_*) \neq 0$. 
+	\end{proof}
+	
+	\begin{proposition}
+		Let $U \subset \bb{R}^n$ be an open submanifold and $x \in \partial U$, and 
+		$T_x\partial U$ be the tangent space of $\partial U$ at $x$. Then  
+	\end{proposition}
+	
+	\begin{proposition}
+		Let $D \subset \bb{R}^n$, $f: \bb{R}^n \raw \bb{R}$ differentiable at $s_* \in D$. Then 
+		
+		\begin{center}
+%			$\langle , \rangle$
+			$\ip{f'(s_*)}{d} > 0$ for all nonzero $d \in \mathcal{B}_D(s_*)$
+		\end{center}
+	
+	if and only if 
+	
+	\begin{center}
+		$f(x) - f(s_*) \geq L\norm{x-s_*}$ for all $x$ in a neighborhood $U$ of $s_*$.
+	\end{center}
+	\end{proposition}
+	
+	
+	\begin{problem}
+		%Let $x = (x_1, ..., x_n) \in \bb{R}^n$, 
+		Let $p, q$ be polynomial functions on $\bb{R}^n$, $R_q = q\mum(0)$ and $f = p/q: (\bb{R}^n \setminus R_q ) \raw \bb{R}$ be polynomials. For $v \in \bb{R}^n$, $r > 0$, we want to find $S(P)$ where
+		
+		\begin{enumerate}
+			\item $P = ( B]v, r[ \setminus R_q, \pm f )$,
+			
+			\item $P = ( B[v, r] \setminus R_q, \pm f )$,
+			
+			\item $P = ( S[v, r] \setminus R_q , \pm f )$, provided $S[v, r] \setminus R_q \neq \emptyset$.
+			
+		\end{enumerate}
+		
+	\end{problem}
+	
+	Let us consider the two simplest particular cases, and see where the difficulties in generalizations lie.
+	
+	\begin{proposition}
+		Consider $n = 1$ and $q = 1$ in problem (ref) (previous problem). Then $S(P)$ the solutions are:
+		
+		\begin{enumerate}
+			\item $S(P) = \{  \}$
+		\end{enumerate}
+		
+		%so that we need only to minimize $\pm p$ in the balls and spheres in dimension $1$ and $2$.
+		
+	\end{proposition}	
+	
+	
+	\begin{problem}
+		Let $U$ be an open $1$-connected region in $\bb{R}^2$ and let $(X, \phi)$ be a graph embedding in $U$. 
+	\end{problem}
+	
+	\newpage
+	
+	
+	
+	\begin{problem}
+		Let $X$ be a graph with two functions $p, c: \bb{X}^0 \raw \bb{R}$, a collection $\{w_j| 1 \leq j \leq n \}$, $w_j : X^1 \raw \bb{R}$ of weights and a collection $\{c_j| 1 \leq j \leq n \}$, $c_j : X^1 \raw \bb{R}$ of capacities. 
+		
+		Find an element $v$ of $\oplus_1^n C^*_W(X)$ such that:
+		
+		\begin{enumerate}
+			\item $\sum_v p(s(v)) = \sum_v c(t(v))$.
+			
+			\item $\sum_v \sum_j w_j(\pi_j(v))$ is minimal
+			
+			\item $\pi_j(v_e) \leq c_j(e)$ for all $j \leq n$, for all $e \in X^1$.
+		\end{enumerate}
+	\end{problem}
+
+
+
+	
 	
 	
 \end{document}
