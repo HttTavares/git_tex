@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.18)  23 JAN 2023 08:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.18)  25 JAN 2023 17:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"./The Birth of Eternity.tex"
-(The Birth of Eternity.tex
+**"./Estado Geral do Mercado Agrícola Brasileiro.tex"
+(Estado Geral do Mercado Agrícola Brasileiro.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-01-16>
 (C:\Users\51053667\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -28,8 +28,8 @@ pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count193
 \l__pdf_internal_box=\box51
-) (The Birth of Eternity.aux)
-\openout1 = `"The Birth of Eternity.aux"'.
+) (Estado Geral do Mercado Agrícola Brasileiro.aux)
+\openout1 = `"Estado Geral do Mercado Agrícola Brasileiro.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
@@ -51,34 +51,29 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 9.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 9.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 17.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 17.
  [1
 
-{C:/Users/51053667/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] (The 
-Birth of Eternity.aux) ) 
+{C:/Users/51053667/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+(Estado Geral do Mercado Agrícola Brasileiro.aux) ) 
 Here is how much of TeX's memory you used:
  458 strings out of 476404
- 8984 string characters out of 2788108
- 1857324 words of memory out of 3000000
+ 9264 string characters out of 2788108
+ 1852324 words of memory out of 3000000
  20890 multiletter control sequences out of 15000+600000
  516534 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,6n,38p,737b,194s stack positions out of 10000i,1000n,20000p,200000b,80000s
-<C:/Users/51053667/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/51053667/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/51053667/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/51053667/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users
-/51053667/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pf
-b><C:/Users/51053667/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmr17.pfb><C:/Users/51053667/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmr7.pfb>
-Output written on "The Birth of Eternity.pdf" (2 pages, 87379 bytes).
+ 34i,6n,38p,177b,194s stack positions out of 10000i,1000n,20000p,200000b,80000s
+<C:/Users/51053667/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/51053
+667/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/
+Users/51053667/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
+10.pfb><C:/Users/51053667/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmr12.pfb><C:/Users/51053667/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmr17.pfb>
+Output written on "Estado Geral do Mercado Agrícola Brasileiro.pdf" (1 page, 5
+7515 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
+ 31 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
