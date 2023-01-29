@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.18)  25 JAN 2023 17:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.18)  29 JAN 2023 14:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -57,10 +57,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 {C:/Users/51053667/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 (Otimizacao de Evolucao Portfolio de Submodais Logisticos.aux) ) 
 Here is how much of TeX's memory you used:
- 460 strings out of 476404
- 9443 string characters out of 2788108
+ 459 strings out of 476404
+ 9435 string characters out of 2788108
  1853324 words of memory out of 3000000
- 20892 multiletter control sequences out of 15000+600000
+ 20891 multiletter control sequences out of 15000+600000
  516841 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,6n,38p,228b,194s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -72,7 +72,7 @@ fonts/cm/cmr10.pfb><C:/Users/51053667/AppData/Local/Programs/MiKTeX/fonts/type1
 /public/amsfonts/cm/cmr12.pfb><C:/Users/51053667/AppData/Local/Programs/MiKTeX/
 fonts/type1/public/amsfonts/cm/cmr17.pfb>
 Output written on "Otimizacao de Evolucao Portfolio de Submodais Logisticos.pdf
-" (1 page, 60667 bytes).
+" (1 page, 60834 bytes).
 PDF statistics:
  31 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
