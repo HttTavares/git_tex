@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.18)  29 JAN 2023 14:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.18)  9 MAR 2023 16:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"./Otimizacao de Evolucao Portfolio de Submodais Logisticos.tex"
-(Otimizacao de Evolucao Portfolio de Submodais Logisticos.tex
+**"./Artigo 1 - Survey Geral.tex"
+(Artigo 1 - Survey Geral.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-01-16>
 (C:\Users\51053667\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -28,8 +28,8 @@ pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count193
 \l__pdf_internal_box=\box51
-) (Otimizacao de Evolucao Portfolio de Submodais Logisticos.aux)
-\openout1 = `"Otimizacao de Evolucao Portfolio de Submodais Logisticos.aux"'.
+) (Artigo 1 - Survey Geral.aux)
+\openout1 = `"Artigo 1 - Survey Geral.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
@@ -52,29 +52,50 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 9.
 
+Overfull \hbox (0.88951pt too wide) in paragraph at lines 19--20
+\OT1/cmr/m/n/10 am-bi-en-tais do se-tor da en-er-gia, em par-tic-u-lar da ind^^
+Sustria e con-sumo do petr^^Soleo,
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 31.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 31.
 [1
 
 {C:/Users/51053667/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-(Otimizacao de Evolucao Portfolio de Submodais Logisticos.aux) ) 
+[2]
+Overfull \hbox (9.11176pt too wide) in paragraph at lines 68--69
+\OT1/cmr/m/n/10 por de-ter-mina^^Xc~oes econ^omicas e hist^^Soricas de pro-prie
+dade de fam^^S^^Plias lat-i-fundi^^Sarias
+ []
+
+
+Overfull \hbox (6.16727pt too wide) in paragraph at lines 78--79
+\OT1/cmr/m/n/10 mento so-bre os pro-ces-sos am-bi-en-tais e ecol^^Sogicos nat-u
+-rais para aux-il-iar a produ^^Xc~ao
+ []
+
+[3] [4] [5] (Artigo 1 - Survey Geral.aux) ) 
 Here is how much of TeX's memory you used:
- 459 strings out of 476404
- 9435 string characters out of 2788108
- 1853324 words of memory out of 3000000
- 20891 multiletter control sequences out of 15000+600000
- 516841 words of font info for 47 fonts, out of 8000000 for 9000
+ 472 strings out of 476404
+ 9127 string characters out of 2788108
+ 1858324 words of memory out of 3000000
+ 20903 multiletter control sequences out of 15000+600000
+ 517187 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,6n,38p,228b,194s stack positions out of 10000i,1000n,20000p,200000b,80000s
-<C:/Users/51053
-667/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:
-/Users/51053667/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-bx9.pfb><C:/Users/51053667/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmr10.pfb><C:/Users/51053667/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmr12.pfb><C:/Users/51053667/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on "Otimizacao de Evolucao Portfolio de Submodais Logisticos.pdf
-" (1 page, 60834 bytes).
+ 34i,6n,38p,642b,194s stack positions out of 10000i,1000n,20000p,200000b,80000s
+<C:/Users/51053667/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/51053667/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/510
+53667/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C
+:/Users/51053667/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mr12.pfb><C:/Users/51053667/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmr17.pfb><C:/Users/51053667/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmti10.pfb>
+Output written on "Artigo 1 - Survey Geral.pdf" (5 pages, 95225 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
+ 48 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

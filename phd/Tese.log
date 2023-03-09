@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.18)  23 FEB 2023 18:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.18)  9 MAR 2023 16:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"./A Logistica do Mercado Agricola Brasileiro.tex"
-(A Logistica do Mercado Agricola Brasileiro.tex
+**./Tese.tex
+(Tese.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-01-16>
 (C:\Users\51053667\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -28,8 +28,8 @@ pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count193
 \l__pdf_internal_box=\box51
-) (A Logistica do Mercado Agricola Brasileiro.aux)
-\openout1 = `"A Logistica do Mercado Agricola Brasileiro.aux"'.
+) (Tese.aux)
+\openout1 = `Tese.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
@@ -51,45 +51,27 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 9.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 9.
+ [1
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--18
-
- []
-
-
-Overfull \hbox (23.72186pt too wide) in paragraph at lines 41--42
-\OT1/cmr/m/n/10 O sis-tema agroal-i-men-tar brasileiro ^^Se forte-mente di-vi-d
-ido en-tre im-porta^^Xc~ao/exporta^^Xc~ao
- []
-
-[1
-
-{C:/Users/51053667/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Overfull \hbox (5.55623pt too wide) in paragraph at lines 63--64
-\OT1/cmr/m/n/10 Dentro do modal rodovi^^Sario, o trans-porte pode ser re-al-iza
-do de in^^Sumeras maneiras
- []
-
-[2] [3] (A Logistica do Mercado Agricola Brasileiro.aux) ) 
+{C:/Users/51053667/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (Tese.aux
+) ) 
 Here is how much of TeX's memory you used:
- 465 strings out of 476404
- 9301 string characters out of 2788108
- 1856324 words of memory out of 3000000
- 20897 multiletter control sequences out of 15000+600000
+ 458 strings out of 476404
+ 8733 string characters out of 2788108
+ 1852324 words of memory out of 3000000
+ 20890 multiletter control sequences out of 15000+600000
  516841 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,6n,38p,724b,194s stack positions out of 10000i,1000n,20000p,200000b,80000s
-<C:/Users/51053667/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users
-/51053667/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pf
-b><C:/Users/51053667/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmr10.pfb><C:/Users/51053667/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmr12.pfb><C:/Users/51053667/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmr17.pfb>
-Output written on "A Logistica do Mercado Agricola Brasileiro.pdf" (3 pages, 78
-183 bytes).
+ 34i,6n,38p,174b,194s stack positions out of 10000i,1000n,20000p,200000b,80000s
+<C:/Users/51053667/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmbx12.pfb><C:/Users/51053667/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmbx9.pfb><C:/Users/51053667/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/51053667/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/51053667/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on Tese.pdf (1 page, 56801 bytes).
 PDF statistics:
- 37 PDF objects out of 1000 (max. 8388607)
+ 31 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
