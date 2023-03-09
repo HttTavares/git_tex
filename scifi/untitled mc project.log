@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.18)  23 FEB 2023 17:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.18)  30 JAN 2023 17:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"./Estado Geral do Mercado Agrícola Brasileiro.tex"
-(Estado Geral do Mercado Agrícola Brasileiro.tex
+**"./untitled mc project.tex"
+(untitled mc project.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-01-16>
 (C:\Users\51053667\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -28,8 +28,8 @@ pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count193
 \l__pdf_internal_box=\box51
-) (Estado Geral do Mercado Agrícola Brasileiro.aux)
-\openout1 = `"Estado Geral do Mercado Agrícola Brasileiro.aux"'.
+) (untitled mc project.aux)
+\openout1 = `"untitled mc project.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
@@ -51,52 +51,26 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 9.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 9.
+ [1
 
-Overfull \hbox (0.88951pt too wide) in paragraph at lines 19--20
-\OT1/cmr/m/n/10 am-bi-en-tais do se-tor da en-er-gia, em par-tic-u-lar da ind^^
-Sustria e con-sumo do petr^^Soleo,
- []
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 31.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 31.
-[1
-
-{C:/Users/51053667/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-[2]
-Overfull \hbox (9.11176pt too wide) in paragraph at lines 68--69
-\OT1/cmr/m/n/10 por de-ter-mina^^Xc~oes econ^omicas e hist^^Soricas de pro-prie
-dade de fam^^S^^Plias lat-i-fundi^^Sarias
- []
-
-
-Overfull \hbox (6.16727pt too wide) in paragraph at lines 78--79
-\OT1/cmr/m/n/10 mento so-bre os pro-ces-sos am-bi-en-tais e ecol^^Sogicos nat-u
--rais para aux-il-iar a produ^^Xc~ao
- []
-
-[3] [4] [5] (Estado Geral do Mercado Agrícola Brasileiro.aux) ) 
+{C:/Users/51053667/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (untitled
+ mc project.aux) ) 
 Here is how much of TeX's memory you used:
- 472 strings out of 476404
- 9400 string characters out of 2788108
- 1858324 words of memory out of 3000000
- 20903 multiletter control sequences out of 15000+600000
- 517187 words of font info for 48 fonts, out of 8000000 for 9000
+ 456 strings out of 476404
+ 8930 string characters out of 2788108
+ 1851324 words of memory out of 3000000
+ 20888 multiletter control sequences out of 15000+600000
+ 516534 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,6n,38p,662b,194s stack positions out of 10000i,1000n,20000p,200000b,80000s
-<C:/Users/51053
-667/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:
-/Users/51053667/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-bx9.pfb><C:/Users/51053667/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmr10.pfb><C:/Users/51053667/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmr12.pfb><C:/Users/51053667/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/51053667/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on "Estado Geral do Mercado Agrícola Brasileiro.pdf" (5 pages, 
-94535 bytes).
+ 34i,5n,38p,266b,192s stack positions out of 10000i,1000n,20000p,200000b,80000s
+<C:/Users/51053667/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmbx12.pfb><C:/Users/51053667/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/51053667/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/51053667/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+Output written on "untitled mc project.pdf" (1 page, 46731 bytes).
 PDF statistics:
- 48 PDF objects out of 1000 (max. 8388607)
+ 26 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
