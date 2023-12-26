@@ -1,0 +1,42 @@
+\chapter{Probability}
+
+\begin{definition}
+	Let $S$ be a set. A $\sigma$-algebra on $S$ is a set $\mathcal{B} \subset \mathcal{P}(S)$ such that 
+	
+	\begin{enumerate}
+		\item 
+	\end{enumerate}
+\end{definition}
+(finish this)
+
+\begin{definition}
+	Let $(S, \mathcal{A}, \mu)$ be a measure space. $\mu$ is called a probability measure if $\mu(S) = 1$. If $\mu$ is a probability, this measure space is called a probability space. In probability spaces, the measure is usually denoted $\bbp$ instead of $\mu$.
+\end{definition}
+
+If $(S, \mathcal{A}, \mu)$ is a measure space such that $\mu(S) < \infty$, one can easily define an equivalent measure space by $(S, \mathcal{A}, \frac{\mu}{\mu(S)})$, which is easily seen to be a probability space.
+
+\begin{exmp}
+	Let $n$ be a positive integer. The standard probability measure in $\bbn_n$ comes from the counting measure. Let $\mathcal{A} = \mathcal{P}$ and $\mu(A) = |A|$ for $A \in \mathcal{P}$. Using the process just described, let 
+	
+	\begin{center}
+		$\bbp(A) = \frac{|A|}{|S|}$.
+	\end{center}
+	
+
+\end{exmp}
+
+\section{Introduction to Random Walks}
+
+\subsection{Random Walks on Graphs}
+Let $X = (X^0, X^1)$ be a locally finite graph. For every $x \in X^0$, consider the standard finite probability distribution on $X^1(x)$. We now define a sequence of random variables $(x_n)_{\bbn}$ recursively by 
+
+\begin{center}
+	$$\bbp(x_n = x) = \sum_{y \in X^0} \bbp(x_{n-1} = y`)  \frac{\chi(y, N_X(x))}{|N_X(y)|}   $$ 
+\end{center}
+(finish)
+
+
+
+
+
+

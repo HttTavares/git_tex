@@ -1,0 +1,1151 @@
+\documentclass[]{article}
+
+
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+
+
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{proposition}{Proposição}[section]
+\newtheorem{lemma}{Lema}[section]
+\newtheorem{algo}{Algoritmo}[section]
+\newtheorem{coro}{Corolário}[section]
+\newtheorem*{remark}{Remark}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{problem}{Problema}[section]
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+
+\newcommand{\ck}{\textbf{CK}}
+\newcommand{\ttt}{\textbf{TTT}}
+\newcommand{\grid}{\textbf{Grid}}
+\newcommand{\raw}{\rightarrow}
+\newcommand{\ie}{\textit{i.e.}}
+\newcommand{\eg}{\textit{e.g.}}
+\newcommand{\bb}{\mathbb}
+\newcommand{\x}{\textbf{x}}
+\newcommand{\oz}{\textbf{o}}
+\newcommand{\mum}{^{-1}}
+\newcommand{\sa}{\overline{\text{span}}}
+\newcommand{\cax}{\mathcal{X}}
+\newcommand{\cay}{\mathcal{Y}}
+\newcommand{\caw}{\mathcal{W}}
+\newcommand{\monoxy}{\text{Mono}_\mathcal{Y}^\mathcal{X}}
+
+
+%opening
+\title{%
+	Games in Combinatorial Structures, Artificial Intelligence, Stochastic Partial Differential Equations and Portfolio Theory \\
+	\large Theory, Data, Agents, Strategies, Balance, Fun, Value, Code and More\\}
+\author{Vniversvs}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+\tableofcontents
+
+\section{Conventions and Notations}
+
+we denote the set of natural numbers $\bb{N} = \{1, 2, 3, ... \}$, the set of integers $\bb{Z} = \{..., -2,-1,0,1,2,... \}$. 
+
+\begin{definition}
+Let $P$ be a partially ordered set, which will also henceforth be called posets.	If $a \leq b \in P$, we denote 
+
+\begin{center}
+	\begin{enumerate}
+		\item 	$[a,b]_P :=\{x \in P; a\leq x\leq b\},$
+		\item 	$]a,b]_P :=\{x \in P; a < x\leq b\},$
+		\item 	$[a,b[_P :=\{x \in P; a\leq x < b\},$		
+		\item 	$]a,b[_P :=\{x \in P; a < x < b\}.$
+	\end{enumerate}
+
+\end{center}
+
+\end{definition}
+
+As a special case, we have, for $n \leq m \in \bb{Z}\  (n \leq m \in \bb{N})$, 
+
+\begin{center}
+	$\bb{Z}_n^m=\{x\in\bb{Z}; n\leq x \leq m\}$ $(\bb{N}_n^m=\{x\in\bb{N}; n\leq x \leq m\})$
+\end{center}
+
+\begin{definition}
+Given a set $X$, its cardinality is denoted by $|X|$. If $Y$ is another set, denote the set of all maps from $X$ to $Y$ by $X^Y$. Symbolically:
+
+\begin{center}
+	$Y^X := \{f; f:X \raw Y\} $.
+\end{center}
+
+\end{definition}
+
+\begin{definition}
+	Let $X$ be a set. We denote the set of all subsets of $X$ by $2^X$.
+\end{definition}
+
+\begin{definition}
+	Let $f_1:X_1 \raw Y_1$, $f_2:X_2 \raw Y_2$ be maps. We denote $f_1 \times f_2: X_1 \times X_2 \raw Y_1 \times Y_2$ the product of $f_1$ and $f_2$, to be map defined by 
+	
+	\begin{center}
+	$f_1 \times f_2(x_1, x_2) = (f_1(x_1), f_2(x_2)$.
+	\end{center}
+\end{definition}
+
+\begin{definition}
+	Let $X \subset Y$. The inclusion map is defined by $\iota: X \raw Y$, $\iota(x)=x$. We use the same notation for the identity function, since it can be seen as the inclusion of a set into itself.
+\end{definition}
+
+
+\section{Elements of Combinatorics}
+
+\begin{proposition}
+	
+	Let $X, Y$ be finite sets. The number of maps from $X$ to $Y$ is $|Y|^{|X|}$. In other words:
+	
+	\begin{center}
+		$|Y^X| = |Y|^{|X|}$
+	\end{center}
+	
+\end{proposition}
+
+\begin{proof}
+	We proceed by induction on $|X|$. Let $Y=\{y_1, ..., y_m \}$. If $|X| = 1$, say $X = \{x\}$. Given $1 \leq i \leq m$, denote $f_i:X \raw Y$, the map given by $f_i(x)=y_i$. There are $m$ of these maps, and any map $f:X \raw Y$ has to be one of these, and therefore there are $|Y|^{|X|} = m^1$ maps in $Y^X$.
+	
+	Assuming the assertion true for all sets $X$ such that $|X|=n$, let us prove it in the case where $|X|= n+1$.	
+	
+	(finish)
+\end{proof}
+
+\begin{proposition}
+	Let $X$ be a set with cardinality $|X|$. For every $n\leq|X|$ there are exactly $\binom{|X|}{n}$ different subsets of $X$ with cardinality $n$.
+\end{proposition}
+
+\begin{proposition}
+	Let $X, Y$ be two finite sets with the same cardinality, say $n$. Then there are $n!$ bijections between them. Symbolically:
+	
+	\begin{center}
+		$|\text{Bij}(X, Y)| = n!$
+	\end{center}
+\end{proposition}
+
+\begin{proof}
+	We shall prove the assertion in the case where $Y=X$, since the general case follows from this using the fact that $|\text{Bij}(X, Y)| \simeq |\text{Bij}(X, X)|$ for all sets $X, Y$.
+	
+	We prove it via induction on $n$. The case where $n=1$ is trivial. Assume then, that for all sets $S_1, S_2$ with cardinality $|S| \leq n$, we have $|\text{Bij}(S_1, S_2)| = n!$, and let $X$ be a set with $|X|=n+1$.
+	
+	Choose any element $x_1 \in X$. Then we have $|X \setminus \{x \}|=n$, and there
+	
+	(finish)
+\end{proof}
+
+
+
+
+
+\begin{proposition}
+	If $X$ is a finite set, then $|2^X| =2^{|X|}$.
+\end{proposition}
+
+\begin{proof}
+	(finish)
+\end{proof}
+
+\begin{proposition}\label{uniquesetcardinality}
+	Given a finite set $X$, there exists a unique $n \in \bb{N}$ for which there is a bijection $f:X \raw [1, n]_{\bb{N}}$.
+\end{proposition}
+
+\begin{definition}\label{cardinality}
+	Given a finite set $X$, by proposition (ref), there exists a unique $n$ and bijection between $X$ and $[1, n]_{\bb{N}}$. This unique $n$ depending exclusively on the set $X$ is called the cardinality of $X$ and is denoted by $|X|$.
+\end{definition}
+
+\begin{proposition}
+	If $X, Y$ are finite sets such that $|X| \leq |Y|$ 
+\end{proposition}
+
+\begin{proposition}
+	Let $X, Y, Z$ be sets, and let $f:Y\raw Z$ be a bijection. Then the map $\phi:Y^X \raw Z^X$ given by $\phi(g)=g\circ f$ is a bijection between $Y^X$ and $Z^X$.
+\end{proposition}
+
+As a result we have:
+
+\begin{coro}
+	If $X, Y, Z$ are finite sets, then $|Y^X|=|Z^X|$.
+\end{coro}
+
+\subsection{Multisets}
+
+\begin{definition}
+	A multiset is a pair $X = (X^0, \mu)$ where $X^0$ is a set and $\mu: X^0 \raw \bb{N}$ is a multiplicity map. If $x \in X^0$, the value $\mu(x)$ is called the multiplicity of $x$ in $X$.
+\end{definition}
+
+If no confusion is likely, we shall abuse notation slightly and denote both the pair and the underlying set by the same symbol. Additionally, for clarity we may denote the multiplicity map by $\mu_X$.
+
+\begin{exmp}
+	Consider the following elementary examples and notations for multisets.
+	
+	\begin{enumerate}
+		\item $(\{x\}, \mu)$, where $\mu(x)=a$ for some $a \in \bb{N}$, will also be denoted $\{x^{\times a} \}$.
+		
+		\item $(\{x, y, z\}, \mu)$, where $\mu(x)=a, \mu(y)=b, \mu(z)=c$ for some $a, b, c \in \bb{N}$, will also be denoted $\{x^{\times a},y^{\times b}, z^{\times c} \}$.
+	\end{enumerate}
+	
+	
+\end{exmp}
+
+\begin{definition}
+	Let $X = (X^0, \mu)$ be a multiset. There is an important associate set, which is given by $M(X) := \{(x, i); \ x \in X, 1\leq i \leq \mu(X) \}$. 	
+\end{definition}
+
+Multisets generalize sets in the sense that every set $X$ can be seen as a multiset with multiplicity map given $\mu(x)=1$ for all $x \in X$.
+
+\begin{definition}
+	Let $X, Y$ be multisets. A map between multisets is a map $f:M(X) \raw M(Y)$. We extend the notation of the set of all maps between two sets to multisets, \ie, we denote $Y^X=\{f:M(X) \raw M(Y) \}$. Two maps $f, g: X \raw Y$ are called equivalent whenever they satisfy the following property:
+	
+	\begin{center}
+		(finish)
+	\end{center}
+\end{definition}
+
+It is readily seen that this reduces to the usual notion of a map between sets if $X$ and $Y$ are normal sets. A particular case of interest for combinatorics is when $X$ is a multiset and $Y$ is a set, and we consider equivalence classes of maps between them. This case is a good model for the situation where you indistiguishable balls being placed on cells randomly.
+
+\begin{proposition}
+	Let $X=(\{x\}, \mu)$, where $\mu(x) = n$, and consider $Y = [1, m]_{\bb{N}} = \{1, ..., m \}$. There are $\binom{n-1}{m-1}$ multiset maps $f:X \raw Y$. Symbolically:
+	
+	\begin{center}
+		$|Y^X|= \binom{n-1}{m-1}$
+	\end{center}
+\end{proposition}
+
+\begin{proof}
+	Let $f \in Y^X$, we denote, for each $1 \leq i \leq m$, $n_i^f=|f\mum(i)|$, \ie, the amount of elements of $M(X)$ whose image is $i$. We have that $\sum_i n_i^f = n$. We claim that there is a bijection (finish)
+\end{proof}
+
+\begin{definition}
+	Let $X=(X, \mu_X)$ be a multiset. A multisubset is a pair $Y=(Y^0, \mu_Y)$ such that $Y^0 \subset X^0$, and $\mu_Y(y)\leq\mu_X(y)$ for all $y \in Y^0$.
+\end{definition}
+
+\begin{proposition}
+	Let $X=(X^0, \mu)$ be a multiset and $Y$ a set. Then there are 
+\end{proposition}
+
+
+
+\subsection{Equivalent Definitions of Multiset}
+
+\begin{definition}
+	A multiset is a pair $(X, \sim)$, where $X$ is a set and $\sim$ is an equivalence relation on $X$.
+\end{definition}
+
+\subsection{Words}
+
+Let $X$ be a set. A word on $X$ is a sequence $x = (x_1, x_2, ...)$ of elements $x_j$ of $X$. It can also be denoted $x=x_1x_2...$. If the sequence is finite, the size of the word, denoted $|x|$ is the number of elements in the sequence, and if the sequence is infinite, we say the word has infinite size, and write $|x| = \omega$.
+
+
+
+\subsection{Permutations}
+
+In this subsection we fix $X = \bb{Z}_n$, for some $n$, and shall study permutations on $X$. 
+
+\begin{definition}
+	A permutation on any set is a bijection of the set into itself.
+\end{definition}
+
+In order to facilitate our presentation of permutations, we introduction the following notation:
+
+\begin{definition}
+	Let $x_1, y_1, x_2, y_2. .., x_n, y_n \in X$, and $\phi:X\raw X$ be a selfmap. We write $\phi(x_1, x_2, ..., x_n) = y_1,y_2, ..., y_n$ to mean $\phi(x_j) = y_j$, $j=1,...,n$.
+\end{definition}
+
+\begin{exmp}
+	Let us look at low values of $n$.
+	
+	\begin{enumerate}
+		\item 	Let $n=1$, so that $X = \{1\}$. It is clear that there is a single bijection $\phi: X \raw X$ given by $\phi(1)=1$. It is even true that this is the only selfmap on $X$. We denote this bijection by the symbol $(1)$.
+		
+		\item Let $n=2$, so that $X = \{1,2 \}$. We then have two possibilities, either $\phi(1,2)=1,2$ or $\phi(1,2)=2,1$. We denote the first bijection by $(12)$ and the second one by $(1)(2)$.
+		
+		\item Let $n=3$, so that $X = \{1,2, 3 \}$. We have 6 possibilities:
+		
+		$$\begin{array}{ccc}
+		\phi(1,2,3)=1,2,3	& \phi(1,2,3)= 2,1,3 & \phi(1,2,3)= 3,1,2 \\ 
+		\phi(1,2,3)= 1,3,2 & \phi(1,2,3)= 2,3,1 & \phi(1,2,3)= 3,2,1
+		\end{array}$$ 
+	\end{enumerate}
+\end{exmp}
+
+Generalizing the notation in the previous items, we introduce:
+
+\begin{definition}
+	Let $r \leq n$, and let $i_1, ...,  i_r$ be pairwise distinct numbers such that $1 \leq i_j \leq n$, $j=1, ..., r$. We define the bijection $(i_1\ i_2\ ...\ i_{j-1}\ i_j):X\raw X$ given by
+
+\begin{flalign*}
+(i_1\ i_2\ ...\ i_{j-1}\ i_j)(i_r) & =i_1 \\
+(i_1\ i_2\ ...\ i_{j-1}\ i_j)(i_j) & =i_{j+1}, j\neq r	\\ 
+(i_1\ i_2\ ...\ i_{j-1}\ i_j)(x) & =x, x \neq i_j		
+\end{flalign*}
+	
+	\noindent These bijections are called cycles, or $r$-cycles to emphasize the size of the cycle. A $2$-cycle is also called a transposition. 
+\end{definition}
+
+Notice the space between the numbers $i_j$. There are problems with this notation, for example, if we are dealing with $\bb{Z}_{15}$, it might lead to mistakes if we consider $(1\ 2\ 3)$ and $(12\ 3)$.
+
+
+\begin{exmp}
+	We provide some basic examples
+	\begin{enumerate}
+		\item 	The permutations in example (ref)(3) are all cycles and can be written respectively as:
+		$$\begin{array}{ccc}
+		\phi = \iota	& \phi = (1\ 2) & \phi = (1\ 2\ 3) \\ 
+		\phi =(2\ 3) & \phi = (1\ 3\ 2) & \phi = (1\ 3)
+		\end{array}$$ 
+		
+		\item the $r$-cycle $(1\ 2\ 3...\ (r-1)\ r)$ is such that $ (1\ 2\ 3...\ (r-1)\ r)j = j+1$, if $1 \leq j < r$, and $(1\ 2\ 3...\ (r-1)\ r)r=1$.
+
+		\item Just as any map, permutations can be composed, sometimes compositions of cycles are again cycles. For example, we have $(1 \ 2)(1 \ 3) = (1 \ 3 \ 2)$. 
+	\end{enumerate}
+
+\end{exmp}
+
+
+\begin{definition}
+	The support of a permutation $\phi \in \text{perm}(X)$ is the set of $x$ not kept constant by $\phi$. More precisely:
+	
+	\begin{center}
+		$\text{supp}(\phi) := \{x \in X; \phi(x)\neq x  \}$.
+	\end{center}
+\end{definition}
+
+\begin{lemma}
+	A simple greedy algorithm is able to find the support of a permutation in linear time.	
+\end{lemma}
+
+\begin{proposition}
+	Given a permutation $\phi \in \text{perm}(X)$, where $X$ is a finite set, then there are transpositions $t_j, j=1,...,r$ such that $\phi = \prod t_j$.
+\end{proposition}
+
+\begin{algo}
+	The following is an algorithm to find a decomposition of any permutation $\phi: \bb{Z}_n \raw \bb{Z}_n$ into transpositions.
+	
+	
+	
+\end{algo}
+
+This decomposition is unique, up to rearrangements:
+
+\begin{theorem}
+	Suppose $\prod_1^{m}\alpha_i=\prod_{1}^{n}\beta_j$, where all the $\alpha_i, \beta_j$ are transpositions on some set $X$. Then $n=m$ and there is a permutation $\psi:\bb{Z}_n\raw\bb{Z}_n$ such that $\alpha_i = \beta_{\psi(j)}$.
+\end{theorem}
+\begin{proof}
+	
+\end{proof}
+
+\begin{proposition}
+	The following are equivalent about a decomposition $\phi = \prod_{1}^n\alpha_i$ into transpositions.
+	
+	\begin{enumerate}
+		\item $n$ is even
+	\end{enumerate}
+\end{proposition}
+
+\begin{problem}
+	Let $m, n \in \bb{N}$.
+	\begin{enumerate}
+		\item How many transpositions of size $m$ act on $\bb{Z}_n$?
+		
+		\item 	What are the decompositions of the permutations of $\bb{Z}_n$ into transpositions?
+		
+		\item Create algorithm to generate all the different products of transpositions on $\bb{Z}_n$. Preferably, each product should be generated only once.
+		
+		\item  
+	\end{enumerate}
+	
+
+\end{problem}
+
+
+\section{Graph Theory}
+
+\begin{definition}
+	A graph is a triple $X=(X^0, X^1, \phi)$ where $X^0, X^1$ are sets whose elements are called $nodes$ and $edges$ respectively, while $\phi:X^1 \raw 2^X$ is a map. 
+\end{definition}
+
+\begin{definition}
+	Let $X=(X^0, X^1, \phi_X)$ be a graph. A subgraph is a graph $Y=(Y^0, Y^1, \phi_Y)$ such that $Y^0\subset X^0$, $Y^1\subset X^1$ and $\phi_X|_{Y^1}=\phi_Y$.
+\end{definition}
+
+\begin{definition}
+	Let $X=(X^0, X^1, \phi_X)$ be a graph.	Given a subset $S^0 \subset X^0$, there is a natural associated subgraph $S$ associated to $S^0$ given by $S=(S^0, S^1, \phi_S)$ where $S^1=\{e \in X^1; \phi(e)\subset S^0 \}$ and $\phi_S := \phi_X|_{S^1}$. This graph is called the graph generated by $S^0$. 
+	
+	Similarly, if $S^1 \subset X^1$, the associated generated graph is given by $(S^0, S^1, \phi_S)$, $S^0=\{x \in X^0; \exists e \in S^1, x \in \phi_X(e)\}$, and again $\phi_S:=\phi_X|_{S^1}$.
+	
+	In each case, the subgraph generated is denoted by $\langle S^0 \rangle_X$ or $\langle S^1 \rangle_X$ accordingly.
+\end{definition}
+
+\begin{exmp}
+	There are some elementary graphs which are very fundamental to all of graph theory, we describe some of them here. Let $n \in \bb{N}$, we define:
+	
+	\begin{enumerate}
+		\item  the path graphs
+		\subitem $P_n^0 = \bb{N}^n_1$
+		\subitem $P_n^1 := \{\{x,x+1\}; x = 1, ..., n-1\}$,
+		
+		\item the cycle graphs
+		\subitem $C_n^0 = \bb{N}^n_1$
+		\subitem $C_n^1 := \{\{x,x+1\}; x = 1, ..., n-1\} \cup \{1, n\}$,
+		
+		\item the complete graphs
+		\subitem $K_n^0 = \bb{N}^n_1$
+		\subitem $K_n^1 = \{xy; 1 \leq x,y \leq n \}$,
+				
+		\item the empty graphs
+		\subitem $0_n^0 = \bb{N}^n_1$
+		\subitem $0_n^1 = \emptyset$,
+				
+		\item the cube graphs
+		\subitem $Q_n^0 = \prod_{1}^{n} \bb{F}_2$
+		\subitem $Q_n^1 = \{\textbf{i}\textbf{j}; \exists 1\leq r\leq n, \ \textbf{j}=\text{tog}_r(\textbf{i})\}$
+		
+		\noindent where 
+		
+		\begin{center}
+			$\text{tog}:\bb{F}_2 \raw \bb{F}_2, \text{tog}(x) = 1-x$ 
+			
+			and $\text{tog}_r = (\prod_1^{r-1}\iota) \times \text{tog} \times (\prod_{r+1}^n \iota)$
+		\end{center}
+		
+	\end{enumerate}
+	
+\end{exmp}
+
+Intuitively, the cube graphs are the graphs whose nodes are binary sequences of size $n$, and two such sequences are neighbors when one differs from the other by a single toggle from $0$ to $1$ or from $1$ to $0$ on some element of the sequence. For example, 
+
+\begin{definition}
+	Let $x \in X^0$. The neighborhood of $x$ in $X$ is defined by 
+	
+	\begin{center}
+		$N_X(x) := \{y \in X^0; xy \in X^1 \}$.
+	\end{center}
+\end{definition}
+
+\begin{exmp}
+\begin{center}
+	$Q_3^0 = \{000, 001, 010, 011, 100,101,110,111\}$
+	
+	$N_{Q_3}(000) = \{001, 010, 100\}$, $N_{Q_3}(010) = \{000, 110, 011\}$.
+\end{center}
+	
+\end{exmp}
+
+\begin{definition}
+	A graph homomorphism of graphs $X, Y$ is a map $\phi: X^0 \raw Y^0$ such that for every $x, y \in X^0$ such that $xy \in X^1$, we have $\phi(x)\phi(y) \in Y^1$. In other words, it carries neighbors into neighbors.
+
+	A graph isomorphism is a bijective graph homomorphism
+\end{definition}
+
+\begin{lemma}
+	The inverse of a graph isomorphism is a graph isomorphism.
+\end{lemma}
+
+\begin{proof}
+	
+\end{proof}
+
+\begin{definition}
+	A path $P$ in a graph $X$ is a subgraph of $X$ isomorphic to a path graph. 
+\end{definition}
+
+\begin{exmp}
+	Let $X = C_n$ the cycle graph of order $n$. Then the subgraph $P^0 = C_n^0$, $P^1 = C_n^1 \setminus \{n, 1\}$ is isomorphic to a path graph.
+\end{exmp}
+
+
+\subsection{Coloring}
+
+
+One of the important properties of graphs is that we can "traverse" a graph by starting at any node, "going through" one edge at a time reaching node after node, provided, naturally, that you can only go through an edge if it is incident on the node you currently occupy, and after going through the edge you will then occupy the other incident node. There are some definitions based on this idea:
+
+\begin{definition}
+	Let $X$ be a graph.
+	
+	\begin{enumerate}
+		\item A walk on $X$ is a finite sequence $w = (x_1, e_1, ..., x_{n}, e_{n}, x_{n+1})$, where the $x_j \in X^0$, $j=1, ..., n+1$ and $e_j \in X^1$, $j=1, ..., n$, and such that for all $j=1,...,n$, $x_j, x_{j+1}$ are the incident nodes on $e_j$. We will also denote $w = x_1e_1...e_nx_{n+1}$ The length of such a walk is $n$, and will be denoted by $\text{len}(w)$.
+		
+		\item A trail is a walk $ w = x_1e_1...e_nx_{n+1}$ such that if $1 \leq j \neq k \leq n$, then $e_j \neq e_k$.
+		
+		\item A path is a walk $w = x_1e_1...e_nx_{n+1}$ such that $1 \leq j \neq k \leq n+1$, then $x_j \neq x_k$ 
+	\end{enumerate}
+\end{definition}
+
+\begin{lemma}
+	Let $X$ be a graph and $w$ be a path on $X$. Then $w$ is also a trail on $X$.
+\end{lemma}
+
+\begin{proof}
+	
+	
+\end{proof}
+
+\begin{definition}
+	The set of all walks of length $n \leq 0$ on a graph $X$ is denoted $X^n$. The set of all walks on $X$ is denoted $X^*$.
+\end{definition}
+
+Notice that there seems to be two meanings to each of the symbols $X^0, X^1$, but the two meanings coincide by equating walks of length $0$ with nodes and walks of length $1$ with edges of the graph, which is a natural procedure.
+
+\begin{definition}
+	Let $X, Y$ be graphs. A cover of $X$ by $Y$ is a partition 
+	
+	\begin{center}
+		$X^0=\bigcup_{j=1}^r Y^0_j$
+	\end{center}
+	
+	\noindent where for each $1 \leq j \leq r$ the subgraph $\langle Y^0_j \rangle_X$ generated by $Y_j^0$ is isomorphic to $Y$.
+\end{definition}
+
+\begin{definition}
+	A very import specific case of cover is the of perfect matching. A perfect matching in $X$ is a cover of $X$ by $K_2$.
+\end{definition}
+
+\begin{definition}
+	A $r$-dimensional grid graph is a graph obtained by the direct product of $r$ path graphs. Symbolically, the grid with parameters $n_1, ..., n_r$ is given by:
+	
+	\begin{center}
+		$\text{Grid}(n_1, ..., n_r) = P_{n_1}\square P_{n_2} \square... \square P_{n_r}$
+	\end{center}
+	
+\end{definition}
+
+\begin{problem}
+	Given two grids $X = \text{Grid}(n_1, ..., n_r)$, $Y = \text{Grid}(m_1, ..., m_s)$, with $r \geq s$, we ask two questions:
+	
+	\begin{enumerate}
+		\item Is there a cover of $X$ by $Y$?
+		
+		\item If so, how many different covers are there?
+	\end{enumerate}	
+\end{problem}
+
+\subsection{Operations on Graphs}
+
+In the section, we describe operations on sets of graphs that yield other graphs. Many important results have proofs using operations such as these. Furthermore they also lead to interesting combinatorial questions. Whenever we apply some operation to some collection of graphs obtaining a graph in the end, we say that this final graph was obtained from the initial collection via the operation.
+
+Let $X, Y$ be graphs. 
+
+\begin{definition}
+	Let $x_0 \in X^0$. We denote by $X \setminus x_0$ the graph obtained by removing $x_0$ from $X^0$, \ie, $(X \setminus x_0)^0 = X^0 \setminus \{x_0\}$, $(X \setminus x_0)^1 = \{e \in X^1; x_0 \ \text{is not incident on e} \}$.
+	
+	Similarly, if $e_0 \in X^1$ we denote $X \setminus e_0$ the graph obtained by removing $e_0$ from $X^1$, \ie, $(X \setminus e_0)^0 = X^0$, $(X \setminus e_0)^1 = X^1 \setminus e_0$.
+\end{definition}
+
+If $Y \leq X$, there is always a way of obtaining $Y$ from $X$ by sequentially deleting nodes and edges, and it is usually the case that there are many ways of doing this sequential procedure.
+
+
+\begin{definition}
+	The cartesian (or box) product of $X$ and $Y$ is denoted by $X \square Y$, and is defined by:
+	
+	\begin{enumerate}
+		\item $(X \square Y)^0 := X^0 \times Y^0$,
+		
+		\item $(X \square Y)^1 := \{(x,y)(x,b); yb  \in Y^1\ \} \cup \{(x,y)(a,y); xa \in X^1\}$.
+	\end{enumerate}
+\end{definition}
+
+\begin{exmp}
+	The grid graphs are defined as 
+	\begin{center}
+		$\text{grid}(n_1, ..., n_r) := P_{n_1}\square ... \square P_{n_r}$.
+	\end{center}
+\end{exmp}
+
+\subsection{Directed Graphs}
+
+
+\subsection{Hypergraphs}
+
+\begin{definition}
+	A Hypergraph is a pair $H=(H^0, H^1, \phi)$ where $H^0, H^1$ are sets and $\phi: H^1 \raw \mathcal{P}(H^0)$ is a map. The elements of $H^0$ are called nodes of $H$ and the elements of $H^1$ are called hyperedges of $H$, whereas the map $\phi$ is called the incidence map.
+
+	The hypergraph is called simple when $\phi$ is an injection, so that we may consider $H^1 \subset \mathcal{P}(H^0)$.
+\end{definition}
+
+\begin{exmp}
+	The Tic-Tac-Toe hypergraphs are denoted by $TTT = TTT(n_1, ... n_d)$, where $n_1, ..., n_d \in \bb{N}$ and given by 
+	
+	\begin{center}
+		$TTT^0 = [1, n_1]_{\bb{N}}\times...\times[1, n_d]_{\bb{N}}$,
+		
+		$TTT^1 = \{ \boldsymbol{i}_j(x); j=1, ..., d, x=1, ..., n_j \}$, where $\boldsymbol{i}_j(x)=(i_1, ..., i_{j-1}, x, i_{j+1} ..., i_d )$, $i_r$ fixed for all $r\neq j$.
+	\end{center}
+
+\subsection{Algorithms}
+
+\begin{definition}
+	content...
+\end{definition}
+
+\end{exmp}
+
+\section{Enumerative Combinatorics}
+\section{Algebraic Combinatorics}
+\subsection{Algebra}
+
+\begin{definition}
+	A group is a pair $(G, *)$ where $G$ is a set and $*$ is a map 
+	
+	\begin{center}
+		$*: G\times G \raw G$, $(x, y) \mapsto x* y =: xy$
+	\end{center}
+	
+	\noindent satisfying for all $x, y z$:
+	
+	\begin{enumerate}
+		\item $x * (y * z) = (x * y) * z$, \ie, $x(yz)=(xy)z$.
+		
+		\item There exists an element $1 \in G$ such that $x* 1 = 1 * x = x$, \ie $x1 = 1x = x$.
+		
+		\item There exists $x\mum \in G$ such that $x* x\mum = x\mum * x = 1$, \ie, $xx\mum = x\mum x = 1$.
+		
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}
+	Let $G_1, G_2$ be groups. A homomorphism between $G_1, G_2$ is a map $f:G_1 \raw G_2$ such that $f(xy)=f(x)f(y)$ for all $x,y \in G$. A bijective homomorphism is called a group isomorphism. 
+	
+	A homomorphism from a group into itself is called an endomorphism and a bijective endomorphism is called an automorphism. 
+	
+	The set of all homomorphism between $G_1$, $G_2$ is denote by $\text{Hom}(G_1, G_2)$. We also denote $\text{End}(G)$, $\text{Aut}(G)$ the set of endomorphism and automorphisms of $G$ respectively.
+\end{definition}
+
+\begin{lemma}
+	For every set $X$, the set $\text{Aut}(X)$ is a group under map composition.
+\end{lemma}
+
+\begin{proof}
+	
+	
+\end{proof}
+
+The previous lemma provides us with plenty of examples of groups. But in fact, this situation is always the case. In fact we have the following:
+
+\begin{lemma}
+	Let $G$ be a group, $g \in G$. Consider the map $L_g:G \raw G$ given by $L_g(h)=gh$. Then $L_g$ is an automorphism of $G$, \ie, $L_g \in \text{Aut}(G)$.
+\end{lemma}
+
+\begin{proof}
+	
+\end{proof}
+
+\begin{coro}
+	For any group $G$, the map $L:G \raw \text{Aut}(G)$, given by $L(g) = L_g$ is an injective homomorphism.
+\end{coro}
+
+\begin{exmp}
+	The following are the most canonical examples of groups. 
+	
+	\begin{enumerate}
+		\item Let $n \in \mathbb{N}$. We denote $S_n = \text{Aut}(\mathbb{N}_1^n)$, the group of permutations of the numbers $1$ through $n$.
+		
+		\item 	Let $V$ be a vector space. Then 
+		
+		\begin{center}
+			$\text{GL}(V) := \{T \in \text{Hom}_{vect}(V); T\  \text{is invertible} \}$.
+		\end{center}
+		
+		\noindent is a group under composition of maps, known as the General Linear Group of $V$.			
+	\end{enumerate}
+\end{exmp}
+
+Isomorphic groups share many important properties.
+
+\begin{definition}
+	A representation of $G$ is a pair $(\rho, V)$ where $V$ is a vector space and $\rho: G \raw \text{GL}(V)$ is a group homomorphism.
+\end{definition}
+
+\begin{definition}
+	An (a left) action of a group $G$ is a pair $(\rho, X)$ where $X$ is a set, $\rho: G \times X \raw X$ satisfying, for all $g, h \in G$, $x \in X$:
+	
+	\begin{enumerate}
+		\item $\rho(g,\rho(h,x)) = \rho(gh, x)$,
+		
+		\item $\rho(1, x) = x$. 
+	\end{enumerate}
+\end{definition}
+
+We will often abuse notation slightly and suppress $\rho$ and say $V$ is a representation of $G$, and conversely we may also declare a representation $\rho$ of $G$, suppressing $V$.
+
+\begin{lemma}
+	Let $G$ be a group.
+	
+	Let $(\rho, V)$ be a representation of $G$. Then, if you consider the underlying  set of $V$, you obtain a group action $\rho_X: G \times V \raw V$, given by $gv = \rho(g)v$.
+	
+	Conversely, if $(\rho, X)$ is a group action of $G$, then the map $\rho_V: G \raw GL(Vect(X))$, given by $\rho(g)v = gv$ for all $v=\sum_{x \in X}\lambda_xx$ is a representation of $G$.  
+\end{lemma}
+
+Combinatorial structures sometimes have interesting symmetries
+
+\begin{definition}
+	Let $V$ be a representation of $G$, and $W \subset V$ be a subspace. We say that $W$ is $G$-invariant if for all $g \in G$, $w \in W$ $gw \in W$. 
+\end{definition}
+
+An extremely important and very profound problem of group theory is to find all irreducible finite-dimensional representations of a given group $G$.
+
+We have had partial success with some classes of groups, especially finite groups and finite representations which will be the main focus of our attention here.
+
+
+
+\section{Finite Geometry}
+
+\subsection{Polyominoes}
+
+\begin{definition}
+	We consider the natural graph structure on $\bb{Z}^r$ given by the edges 
+	
+	\begin{center}
+		$\{e=xy; \|x-y\|=1 \}$.
+	\end{center}
+\end{definition}
+
+\begin{definition}
+	A $r$-dimensional shape $S$ is a subgraph of $\bb{N}^r$. A shape $S$ is connected if it is connected as a graph, \ie, if for any two nodes $x, y$, there is a path $P(x, y)$ subgraph of $S$ connecting $x$ and $y$. 
+\end{definition}
+
+\begin{definition}
+	A polyomino is a connected finite shape.
+\end{definition}
+
+There are many ways to study polynomials, for instance with respect to symmetries or without them.
+
+\begin{proposition}
+	For $n \leq 6$, the following table is holds data on polynomioes with cardinality less or equal to $6$. 
+
+
+
+\end{proposition}
+
+\begin{proof}
+	
+\end{proof}
+
+
+
+
+\section{Design Theory}
+\section{Cellular Automata}
+
+
+\section{Order Theory}
+
+\begin{definition}
+	A partial order on a set $X$ is a binary relation $\leq$ satisfying:
+	
+	\begin{itemize}
+		\item (Reflexivity) for all $x \in X$, $x \leq x$,
+
+		\item (Associativity) if $x, y, z \in X$ are such that $x \leq y$ and $y \leq z$ then $x \leq z$,
+
+		\item (Antisymmetry) if $x, y \in X$ are such that $x\leq y$ and $y\leq x$, then $x=y$.
+	\end{itemize}
+
+	A partially ordered set, or poset for convenience, is a pair $(X, \leq)$, where $X$ is a set and $\leq$ is a partial order on $X$.
+\end{definition}
+
+\begin{definition}
+	Let $X, Y$ be posets. An order preserving map from $X$ to $Y$ is a map $\phi:X^0 \raw Y^0$ such that if $x_1 \leq x_2$ in $X$, then $f(x_1) \leq f(x_2)$ in $Y$.
+\end{definition}
+
+\begin{exmp}
+	The canonical example of poset is the set of subsets of some set, or a subset of the power set. More precisely, if $\mathcal{F} \subset 2^X$ is a family of subsets of some set $X$, then $(\mathcal{F}, \subset)$ is a poset.
+	
+\end{exmp}
+
+
+\begin{proposition}
+	The number of partial orders on a set with $x$ is
+\end{proposition}
+
+\begin{lemma}
+	Let $P$ be a finite poset and $P_0 \subset P$. For every $s \in P_0$ there exists an element $\tilde{s}$ such that for every $t \in P$ we have:
+	
+	\begin{enumerate}
+		\item $s \leq \tilde{s}$,
+		
+		\item either $t \leq \tilde{s}$ or $t$ and $s$ are uncomparable.
+	\end{enumerate}
+	 
+	In other words, in a poset $P$, every element of $P$ is less or equal to a maximal element.
+\end{lemma}
+
+\begin{proof}
+	
+	
+\end{proof}
+
+\begin{coro}
+	If $X$ is a set and $\mathcal{F} \subset 2^X$ is a set of subsets of $X$, then there is a $Y \in \mathcal{F}$ such that $X \subset Y$ and if $Z \in F$ then either $Z \subset Y$ or $Z$ and $Y$ are uncomparable. In other words, every subset is contained in a maximal subset with respect to $\mathcal{F}$.
+\end{coro}
+
+\section{Matroid Theory}
+\section{Probability Theory}
+\section{Statistics}
+
+\section{Combinatorial Species}
+
+\newpage
+\section{Combinatorial Optimization}
+
+\begin{definition}
+	Let $\cax, \cay$ be two classes of graphs. We define $\monoxy$ to be the set of all triples $(\phi, Y, X)$, where $Y \in \cay, X \in \cax$, $\phi: Y \raw X$ is injective. In other words, $\monoxy$ is the set of all injective graph homomorphisms of graphs of $\cay$ into graphs of $\cax$. 
+\end{definition}
+
+\begin{definition}
+	Weights on graphs.
+	
+	\begin{enumerate}
+		\item A weighted graph is a pair $(X, w)$, where $X$ is a graph and $w: X^1 \raw \bb{R}$.
+		
+		\item A node-weighted graph is a pair $(X, w)$, where $X$ is a graph and $w: X^0 \raw \bb{R}$.
+		
+		\item If $Y \leq X$ is a subgraph, we define $w(Y) := \sum_{e \in Y^1} w(e)$. More generally if $\phi \in \monoxy$, we define $w(\phi) := \sum_{e \in Y^1} w(\phi(e))$
+	\end{enumerate}
+	
+\end{definition}
+
+\begin{definition}
+	An optimization problem on graphs is a pair $(\mathcal{X}, \mathcal{Y})$, where $\mathcal{X}$ is a class of weighted graphs and $\mathcal{Y}$ class of graphs.
+	
+	An instance of the optimization problem $(\cax, \cay)$ is a graph $X \in \cax$.
+	
+	Given an optimization problem $P = (\cax, \cay)$ and an instance $X$, the solution set $S_P(X)$ is 
+	
+	\begin{center}
+		$$S_P(X) := \text{argmin}_{m \in M^\cax_\cay} w(m)$$
+		
+		%\{\phi(Y) \ | \ \text{for some} Y \in \cay \ \text{such that} w(Y) is \}$
+	\end{center}
+	
+\end{definition}
+
+The class $\mathcal{X}$ contains the restrictions we want to consider on graphs, such as only considering specific types of weights, or being interested only on solutions on $k$-regular graphs.
+
+\begin{exmp}
+	Let $\cax$ is the class of all simple graphs with weights $w_X: X^1 \raw \bb{R}$, $w_X(e) = -1$ for all $e \in X^1$, \ie, the weights are constant equal to $-1$ on all edges and $\cay = \{ P_n \ | \ n \in \bb{N} \}$ is the class of all paths. Then the optimization problem is to find a longest path. Local minima are maximal paths. 
+	
+	Similarly if $\cay$ is the class of all cycles, then the optimization problem is to find longest cycles, and local minima are maximal cycles.
+\end{exmp}
+
+\begin{definition}
+	A solution to an optimization problem $P = (\cax_\caw, \cay)$ is a map $\Phi: \cax_\caw \raw \monoxy$ such that $\Phi(X, w)_e = X$ and $\Phi(X, w) = (\phi, Y, X)$ is a solution to the instance $(X, w, \cay)$, \ie 
+	
+	
+	\begin{center}
+		$w(\phi(Y)) \leq w(Z)$, for all $Z \leq X, Z \in \cay$.
+	\end{center}.
+\end{definition}
+
+We give a trivial example of a solution to a class of problems. Let $\cax$ be the class of all cycles with an arbitrary edge-weight and $\cay$ be the class of all cycles. The only injective homomorphisms $\phi: Y \raw X $ are the identities between cycles of the same length so that we can write $\monoxy = \{ (\iota_n, C^n, C^n)| \ n \in \bb{N} \}$. Trivially, $\Phi(C_n, w) = (\iota_n, C_n, C_n)$ for any weight $w$. After all, the only minimal cycle of a cycle is the cycle itself.
+
+Let us now find some solutions to some classical problems. 
+
+\begin{proposition}
+	Let $\cax$ be the canonical category of all simple graphs with constant weights equal to $-1$. Consider the following problems:
+	
+	\begin{enumerate}
+		\item The maximal path problem. Let $\cay$ be the category of all path graphs. 
+		
+		\item The longest path problem. Let $\cay$ be the category of all path graphs. 
+
+		\item The maximal cycle problem. Let $\cay$ be the category of all cycle graphs. 
+
+		\item The longest cycle problem. Let $\cay$ be the category of all path graphs. 
+
+	\end{enumerate}
+\end{proposition}
+
+ 
+%Notice that we define weights as being present in both nodes and edges, whereas most time weights are present in only one of them. 
+
+\subsection{The Minimal Path Problem}
+
+Let $(X, c)$ be a weighted graph, $s, t \in X^0$. Let $W(s, t)$ be the set of all walks from $s$ to $t$. 
+
+We are interested in solving the following problem:
+
+\begin{definition}
+	Let $X_c$ be a directed weighted graph and $s, t \in X^0$. The shortest path problem from $s$ to $t$ on the weighted graph $X_c$ is given by the pair $(\mathcal{W}(s, t), d_w)$. 
+\end{definition} 
+
+In other words we want to find a directed walk $P \in \mathcal{W}(s, t)$ from $s$ to $t$ is such that $c(P)$ is of minimal cost.
+
+\begin{definition}
+	We define the weighted distance $d = d_w:X^0 \times X^0 \raw \bb{R}$ by 
+	
+	\begin{center}
+		$d_w(i, j) = \min\{W |\ W \in W(x, y) \}.$
+	\end{center}
+\end{definition}
+
+\begin{proposition}
+	Suppose you have a function $prev: X^0 \raw X^0$ such that:
+	
+	\begin{enumerate}
+		%\item There is a single $s \in X^0$ such that $prev(s) = s$.
+		
+		\item If $prev(x) = y$, then $(x, y) \in X^1$.
+		
+		\item A subset $C \subset X^0$ is such that $prev(C) \subset C$ if and only if $s \in C$.
+		
+		\item For every $i \in X^0$, $c(prev(i), i)$
+		
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}
+	Let $V \subset X^0$.
+\end{definition}
+
+
+\begin{definition}
+	Given $S, T \subset X^0$, a multi shortest problem is given the pair $(\mathcal{W}(S, T), d_c)$.
+\end{definition}
+
+
+\begin{proposition}
+
+	Let $X$ be a weighted directed acyclic graph and $P = i_{1}...i_{h}$ be a shortest path between $s = i_1$ and $t = i_h$. Then for every $ 1 \leq j \leq h$  the path $P = i_{1}...i_{j}$ is a shortest path between $s = i_1$ and $i_j$.
+
+\end{proposition}
+
+\begin{proposition}
+	Let $X$ be a weighted directed acyclic graph, $s \in X^0$ and define $d_s: X^0 \raw \bb{R}$ by $d_s(k) = d(s, k)$  $P = i_{1}...i_{h}$ be a directed path in $X$. Then $P$ is a shortest path if and only if for every $e = (i, j) \in P^1$, $d_s(j) = d_s(i) + c(i, j)$.  
+\end{proposition}
+
+\begin{proposition}
+	Let $X$ be a weighted graph with no negative directed cycle, $s \in X^0$ and $d: X^0 \raw \bb{R}$. Then $d$ is the shortest distance function with respect to $s$ if and only if 
+\begin{enumerate}
+	\item $d(s) = 0$
+	
+	\item For all $a \in X^1$, $d(a_2) \geq d(a_1) + c(a_1, a_2)$. 
+\end{enumerate}	
+
+\end{proposition}
+
+
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+TRASH
+
+\begin{algo}
+	
+	Multipost algorithm. 
+	
+	INPUT: $X,$ a weighted graph. $S, T \subset X^0$
+	
+	OUTPUT: $P$, a shortest cycle that passes through all $s \in S$, starting from $s_1$ and than through all $t \in T$ and then returns to $s_1$.
+	
+\end{algo}
+
+
+\subsection{Traveling Salesperson Problem}
+
+\begin{definition}
+	Let $\cax$ be the canonical category of all simple graphs with arbitrary edge-weights. 
+\end{definition}
+
+\begin{definition}
+	A Traveling Salesperson Problem (TSP) is a pair $(n, C)$ where $n \in \bb{N}$ and $C$ is a matrix $C \in \text{End}(N^n)$, where $c_{ij} \geq 0$.
+
+	If $C = (n, C)$ is a TSP let $X = X(C)$ be weighted graph given by the matrix $C$, then 
+	
+	\begin{center}
+		$S(C) := \{ T \leq X \ | \ a)\ T \ \text{is a cycle}, b)\ T^0 = X^0, c(T) \ \text{is minimal wrt a) and b)}  \}$
+	\end{center}
+	
+\end{definition}
+
+\subsection{The Vehicle Routing Problems}
+
+\begin{definition}
+	The vehicle routing problem is given by $(\bb{N}^n, h, g)$
+	
+	
+	  $C \in 
+	\text{End}(\bb{N}^n)$.
+
+	Let $C$ be a 
+
+\end{definition}
+
+
+\subsection{The Automated Industrialization Problem}
+
+
+
+
+
+\section{Random Graphs}
+
+\section{Combinatorial Games}
+\subsection{Combinatorial Games on Hypergraphs}
+
+Let us consider tic-tac-toe. It is played on a $3\times3$ grid by two players $X$ and $O$ that take alternating turns in which they chooses one cell to capture (by drawing their symbol on the cell). The player who captures either 3 cells in a horizontal line or 3 in a vertical line or 3 in one of the two diagonals (descending or ascending) wins. Player $X$ goes first.
+
+We can generalize this game in many ways. In (ref) the authors study the $n^d$ version of the game defined loosely as follows. Consider the grid graph $\text{Grid}(n^d)$ with dimension $d$ and width $n$. The game is completely similar to the original tic-tac-toe except that players have to capture $n$ in a line (horizontal, vertical or diagonal). A precise definition will be given momentarily.
+
+Notice that by saying $n$ in a line implies that you have to capture a whole line, since there are exactly $n$ cells in each line.
+
+But we can generalize this further in many directions. We can make more than two players play each match, or require fewer than $n$ in a row, for example having three players whose marks are $1, 2, 3$ and they take turns according to their marks' order and they only have to capture 3 in a row in a $n^d$ game where $n > 3$. This means you do not have to capture a whole line to win. Additionally you can allow more general grids such as $\text{Grid}(n_1, ..., n_d)$, as well as remove some of the cells from the game so that they are not capturable and finally changing the "pattern" of victory set, instead of always using a segment of a line. 
+
+We are interested in developing AI systems that come up with interesting strategies for high victory proportions rather than completely solving the game. 
+
+\begin{definition}
+	Let $d, N, v \in \bb{N}, d > 0, N > 1, \textbf{n} \in \bb{N}^d$, consider the graph $\grid(\textbf{n})$ defined in (ref) and $E \subset \grid(\textbf{n})^0$ and finally $\mathcal{V} \subset \mathcal{P}(\grid(\textbf{n})^0)$. We define the generalized tic-tac-toe in $\grid(\textbf{n}) \setminus E$ to be the game played by $N$ players in this graph where the players take turns in a cycle according to their order. 
+	
+	The victory sets are
+	
+	\begin{center}
+		$V = \{ a, b, c| \ a_i \}$
+	\end{center}
+
+	
+	In player $i$'s turn they choose an element $p \in \grid(\textbf{n}) \setminus E$ to capture, which means labeling this $p$ with label $i$. Player $i$ wins if they just complete 
+
+	Such a game will be denoted $\ttt(\textbf{n}, E, \mathcal{V})$.
+
+\end{definition}
+
+\begin{definition}
+	A random strategy with probability distribution $p$ in the game $\ttt(\textbf{n}, E, \mathcal{V})$ is a strategy where each turn a lottery is taken on all available cells of the game and whichever cell wins is chosen as the captured. (finish)
+\end{definition}
+
+
+
+
+\subsection{Combinatorial Card Games}
+\subsection{Combinatorial Economic Games}
+
+\section{Cryptography}
+\section{Game Theory}
+
+
+
+
+\section{Turing Machines}
+\section{Algorithms}
+\section{Game of Life}
+\section{Dynamic Games}
+\section{Board Games}
+\section{Card Games}
+
+We shall now turn to the study of games in which the players played with cards. A precise definition will be given later, but examples of such games are poker, the Blizzard videogame hearthstone, set, freecell, solitaire, uno, Magic the Gathering, etc...
+
+We wish to develop a general language for such games as well as a rigorous theory about them in terms of combinatorial structures previously studied, in order to develop AI agents to solve of excel at them.
+
+The oldest examples of card games were games played on the standard deck of cards with 13 cards of four different suits. These are not only classic examples, but many of them are still played by large communities, and some are even studied academically. We therefore make a separation by classifying them as "deck games".
+
+\section{Deck Games}
+
+We first define the deck of cards. 
+
+\begin{definition}
+
+	Let $S = \{ \diamondsuit, \heartsuit, \clubsuit, \spadesuit \}$ and $D = \bb{N}_1^{13} \times S = \{ c = (n_c, s_c)\ | \ 1 \leq n_c \leq 13, s_c \in S \}$. We call this set the deck of cards, or deck for short. 
+	
+	We shall denote $\textbf{n}$ the first projection $p_1: D \raw \bb{N}_1^{13}$ and $\textbf{s} = p_2: D \raw S$ the second one. 
+	
+\end{definition}
+
+It is clear that $D$ has cardinality $52$.
+
+In this description, the $4$ of hearts corresponds to the element $c = (4, \heartsuit) \in D$ (in this case $\textbf{n}(c) = 4$), the jack of clubs to the element $c = (11, \clubsuit)$ (in this case $\textbf{s}(c) = \clubsuit$) and so on. 
+
+\subsection{Poker}
+
+Poker is a family of deck games
+
+We calculate some essential probabilities on $D$ related to the game of poker. 
+
+\begin{definition}
+	A hand is subset $H \subset D$ with cardinality $5$. If we say $n$ hands, we mean a collection $H_1, ..., H_n$ disjoint hands.
+\end{definition}
+
+
+\begin{definition}
+	
+	\begin{enumerate}
+		\item 	Let $\Omega_n$ be the sample space of the experiment of drawing $n$ cards where $n \leq 52$. More precisely:
+		
+		\begin{center}
+			$\Omega_n := \{ \omega \subset \Omega; \ |\omega| = n \} $.
+		\end{center}
+	
+		\item We define the probability spaces $(\Omega_n, P_n)$ by putting:
+		
+		\begin{center}
+			$P_n(\omega ) = 1/C_{n}^{52} = \frac{1}{C_{n}^{52}}$, 
+		\end{center}
+
+		\ie, we use the counting measure on $\Omega_n$.
+
+		\item We define the number counting function on $\Omega_n$ by
+		
+		\begin{center}
+			$ \#_n: \Omega_n \raw \bb{N}$, $\#_n(m, \omega) = |\{ c \in \omega; \textbf{n}(c) = m \}|$
+		\end{center}
+		
+	\end{enumerate}
+	
+	%Furthermore define the event $T_m = \{ \omega \in \Omega_1\ | \ |\textbf{n}(\omega)| = m \}$, $m = 2, ..., 5$
+	
+\end{definition}
+
+For convenience we shall denote $\omega \in \Omega_n$ as $\omega = $
+
+
+	Let $\omega \in \Omega_n$. 
+
+\begin{proposition}
+	The probability of drawing 2 cards with the same number on one hand is giver by:
+	
+	\begin{center}
+		$P(\omega) \{\} $
+	\end{center}
+
+\end{proposition}
+
+\begin{proof}
+%	Define the event $A_ = \{ \omega \in \Omega_1\ | \ \exists \omega_1, \omega_2 \in \omega; \textbf{n}(\omega_1) = \textbf{n}(\omega_2) \}$.
+	
+
+	
+	First, notice that 
+\end{proof}
+
+\section{Mixed Structure Games}
+\section{Mod Theory}
+\section{Economic Games}
+\section{Agent Theory}
+\section{Strategies}
+\section{Balance Theory}
+\section{Portfolio Theory}
+\section{Practical Code}
+\section{Data}
+\section{Stochastic Partial Differential Equations}
+\section{The Automated Galactic Colonization Problem}
+
+
+
+
+
+
+
+\end{document}

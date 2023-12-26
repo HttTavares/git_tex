@@ -1,0 +1,208 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.5.31)  10 SEP 2023 18:32
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**qualificacao.tex
+(./qualificacao.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+(/usr/share/texlive/texmf-dist/tex/latex/extsizes/extsizes.sty
+Package: extsizes 1996/10/08 v1.0 Non Standard LaTeX Package
+
+
+Package ExtSizes Warning: It is better to use one of the extsizes classes,
+ if you can.
+
+(/usr/share/texlive/texmf-dist/tex/latex/extsizes/size14.clo
+File: size14.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2020-02-14 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count175
+\l__pdf_internal_box=\box45
+))
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2020-02-14 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count176
+\g__xparse_grabber_int=\count177
+\l__xparse_m_args_int=\count178
+\l__xparse_v_nesting_int=\count179
+)
+Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
+
+(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex
+File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
+))
+(./qualificacao.aux)
+\openout1 = `qualificacao.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <17.28> on input line 17.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 17.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 27.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 27.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (8.09093pt too wide) in paragraph at lines 33--34
+[]\OT1/cmr/m/n/14.4 Por ex-em-plo, este \OT1/cmr/m/it/14.4 frame-work \OT1/cmr/
+m/n/14.4 te^^Sorico for-mula a ne-ces-si-dade de cria^^Xc~ao
+ []
+
+[2]
+Overfull \hbox (5.84119pt too wide) in paragraph at lines 50--51
+\OT1/cmr/m/n/14.4 baseado na grande pro-priedade pri-vada, t^^Secnicas ind^^Sus
+triais bioqu^^S^^Pmicas
+ []
+
+[3] [4]
+Overfull \hbox (8.26952pt too wide) in paragraph at lines 70--71
+\OT1/cmr/m/n/14.4 tanto mod-e-lar o im-pacto am-bi-en-tal de duas fases mais cr
+^^S^^Pticas - produ^^Xc~ao
+ []
+
+[5] [6]
+Overfull \hbox (25.17513pt too wide) in paragraph at lines 89--90
+\OT1/cmr/m/n/14.4 cresci-mento de col-heita (ref) e de-sen-volver-e-mos um al-g
+o-ritmo de otimiza^^Xc~ao
+ []
+
+
+Overfull \hbox (7.01622pt too wide) in paragraph at lines 97--98
+\OT1/cmr/m/n/14.4 ite desta linha de tec-nolo-gias na produ^^Xc~ao e com-parar 
+com os par^ametros
+ []
+
+[7]
+Overfull \hbox (13.17429pt too wide) in paragraph at lines 113--114
+[]\OT1/cmr/m/n/14.4 O au-mento ten-di-cial do servi^^Xco de \OT1/cmr/m/it/14.4 
+de-liv-ery \OT1/cmr/m/n/14.4 de al-i-men-tos e prepara^^Xc~oes
+ []
+
+
+Overfull \hbox (3.1899pt too wide) in paragraph at lines 113--114
+\OT1/cmr/m/n/14.4 al-i-menta-res atrav^^Ses de rela^^Xc~oes em-presa servi^^Xco
+-empresa produtora-
+ []
+
+[8] [9]
+Overfull \hbox (34.99287pt too wide) in paragraph at lines 144--145
+\OT1/cmr/m/n/14.4 ramo e, us-ando estes in-di-cadores como par^ametro bayesiano
+s prior^^S^^Psticos,
+ []
+
+
+Overfull \hbox (4.28654pt too wide) in paragraph at lines 146--147
+\OT1/cmr/m/n/14.4 sentes na lit-er-atura para out-ros servi^^Xcos, prin-ci-pal-
+mente por agentes
+ []
+
+[10]
+Overfull \hbox (23.86966pt too wide) in paragraph at lines 154--155
+\OT1/cmr/m/n/14.4 mos de renda so-cial, idade, regi~ao, n^^S^^Pvel de de-sen-vo
+lvi-mento econ^omico,
+ []
+
+
+Overfull \hbox (28.32501pt too wide) in paragraph at lines 158--159
+\OT1/cmr/m/n/14.4 ini-cia-tiva aberta \OT1/cmr/m/it/14.4 Open Street Map\OT1/cm
+r/m/n/14.4 , com in-forma^^Xc~oes de re-des rodovi^^Sarias
+ []
+
+[11] [12]
+Overfull \hbox (3.05795pt too wide) in paragraph at lines 185--186
+[]\OT1/cmr/m/n/14.4 Formularemos um prob-lema de otimiza^^Xc~ao com-bi-nat^^Sor
+ia de aloca^^Xc~ao
+ []
+
+
+Overfull \hbox (10.77612pt too wide) in paragraph at lines 185--186
+\OT1/cmr/m/n/14.4 geoes-pa-ciotem-po-ral destes es-ti-mada por sen-sore-a-mento
+ re-moto e ve^^S^^Pculos
+ []
+
+[13] [14] [15]
+Overfull \hbox (5.21243pt too wide) in paragraph at lines 224--225
+[]\OT1/cmr/m/n/14.4 Treinaremos uma rede neu-ral (ref) com os da-dos obti-dos n
+o primeiro
+ []
+
+[16]
+Overfull \hbox (4.79326pt too wide) in paragraph at lines 232--233
+[]\OT1/cmr/m/n/14.4 Para este prob-lema de otimiza^^Xc~ao com-bi-nat^^Soria, us
+-are-mos re-stri^^Xc~oes
+ []
+
+
+Overfull \hbox (1.30994pt too wide) in paragraph at lines 234--235
+\OT1/cmr/m/n/14.4 uma mi-cror-regi~ao afeta as mi-cror-regi~oes viz-in-has, e p
+arametrizando
+ []
+
+[17]
+Overfull \hbox (9.05283pt too wide) in paragraph at lines 249--250
+\OT1/cmr/m/n/14.4 etapa da produ^^Xc~ao do se-tor agr^^S^^Pcola sem en-gen-drar
+ sac-rif^^S^^Pcios econ^omicos
+ []
+
+[18] [19] [20] [21] (./qualificacao.aux) ) 
+Here is how much of TeX's memory you used:
+ 998 strings out of 483183
+ 24733 string characters out of 5966292
+ 432709 words of memory out of 5000000
+ 16068 multiletter control sequences out of 15000+600000
+ 537951 words of font info for 42 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 35i,6n,33p,888b,187s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/vni/.texlive2019/texmf-var/fo
+nts/pk/ljfour/jknappen/ec/tcrm1440.600pk></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmti12.pfb>
+Output written on qualificacao.pdf (21 pages, 118330 bytes).
+PDF statistics:
+ 97 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

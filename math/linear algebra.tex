@@ -1,0 +1,60 @@
+%\documentclass[12pt]{book}
+\usepackage{amsmath, amsthm, amsfonts}
+
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{example}{Example}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+%\newtheorem{proof}{Proof}[chapter]
+
+\begin{document}
+	
+	\chapter{Vector Spaces}
+	
+	\begin{definition}
+		A \textbf{vector space} over a field $\mathbb{K}$ is a set $V$ together with two operations, addition and scalar multiplication, that satisfy the following eight axioms:
+		
+		\begin{itemize}
+			\item[(V1)] $(\forall a,b \in V) (a + b = b + a)$.
+			\item[(V2)] $(\forall a,b,c \in V) ((a + b) + c = a + (b + c))$.
+			\item[(V3)] $(\exists 0 \in V) (\forall a \in V) (0 + a = a)$.
+			\item[(V4)] $(\forall a \in V) (\exists -a \in V) (a + -a = 0)$.
+			\item[(V5)] $(\forall a \in V) (1 \cdot a = a)$.
+			\item[(V6)] $(\forall a \in V, \forall k,l \in \mathbb{K}) ((k \cdot l) \cdot a = k \cdot (l \cdot a))$.
+			\item[(V7)] $(\forall a,b \in V, \forall k \in \mathbb{K}) (k \cdot (a + b) = k \cdot a + k \cdot b)$.
+			\item[(V8)] $(\forall a \in V, \forall k,l \in \mathbb{K}) ((k + l) \cdot a = k \cdot a + l \cdot a)$.
+		\end{itemize}
+	\end{definition}
+	
+	\begin{example}[\textbf{Easy}]
+		The set of real numbers $\mathbb{R}$ is a vector space over itself, with usual addition and multiplication as the operations.
+	\end{example}
+	
+	\begin{example}[\textbf{Medium}]
+		The set of all polynomials with real coefficients, $P(\mathbb{R})$, is a vector space over the real numbers with polynomial addition and scalar multiplication defined as usual.
+	\end{example}
+	
+	\begin{example}[\textbf{Hard}]
+		The set of all continuous real-valued functions defined on a closed interval $[a, b]$, denoted by $C([a, b])$, is a vector space over the real numbers. The operations are function addition and scalar multiplication defined as follows: for $f, g \in C([a, b])$ and $c \in \mathbb{R}$,
+		\begin{align*}
+		(f + g)(x) &= f(x) + g(x), \forall x \in [a, b], \\
+		(c \cdot f)(x) &= c \cdot f(x), \forall x \in [a, b].
+		\end{align*}
+	\end{example}
+	
+	\begin{proposition}
+		Given a field $\mathbb{K}$, all vector spaces of dimension $n$ over $\mathbb{K}$ are isomorphic.
+	\end{proposition}
+	
+	\begin{proof}
+		Let $V$ and $W$ be vector spaces of dimension $n$ over $\mathbb{K}$. Let $\{v_1, \ldots, v_n\}$ and $\{w_1, \ldots, w_n\}$ be bases for $V$ and $W$, respectively. Define a function $T: V \rightarrow W$ by
+		\begin{align*}
+		T(a_1v_1 + \cdots + a_nv_n) = a_1w_1 + \cdots + a_nw_n,
+		\end{align*}
+		for $a_1, \ldots, a_n \in \mathbb{K}$. One can verify that $T$ is a linear transformation. Since every vector in each vector space can be expressed as a linear combination of its basis vectors, $T$ is surjective. Since the coefficients $a_i$ are unique for each vector in the basis, $T$ is also injective. Hence, $T$ is a bijective linear transformation, i.e., an isomorphism, so $V \cong W$. Thus, all vector spaces of dimension $n$ over $\mathbb{K}$ are isomorphic.
+	\end{proof}
+	
+\end{document}
+
+
+
+

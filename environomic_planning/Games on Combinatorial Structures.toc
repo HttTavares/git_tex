@@ -1,0 +1,55 @@
+\contentsline {section}{\numberline {1}Conventions and Notations}{3}%
+\contentsline {section}{\numberline {2}Elements of Combinatorics}{4}%
+\contentsline {subsection}{\numberline {2.1}Multisets}{5}%
+\contentsline {subsection}{\numberline {2.2}Equivalent Definitions of Multiset}{6}%
+\contentsline {subsection}{\numberline {2.3}Words}{6}%
+\contentsline {subsection}{\numberline {2.4}Permutations}{6}%
+\contentsline {section}{\numberline {3}Graph Theory}{8}%
+\contentsline {subsection}{\numberline {3.1}Coloring}{9}%
+\contentsline {subsection}{\numberline {3.2}Operations on Graphs}{11}%
+\contentsline {subsection}{\numberline {3.3}Directed Graphs}{11}%
+\contentsline {subsection}{\numberline {3.4}Hypergraphs}{11}%
+\contentsline {subsection}{\numberline {3.5}Algorithms}{11}%
+\contentsline {section}{\numberline {4}Enumerative Combinatorics}{12}%
+\contentsline {section}{\numberline {5}Algebraic Combinatorics}{12}%
+\contentsline {subsection}{\numberline {5.1}Algebra}{12}%
+\contentsline {section}{\numberline {6}Finite Geometry}{13}%
+\contentsline {subsection}{\numberline {6.1}Polyominoes}{13}%
+\contentsline {section}{\numberline {7}Design Theory}{14}%
+\contentsline {section}{\numberline {8}Cellular Automata}{14}%
+\contentsline {section}{\numberline {9}Order Theory}{14}%
+\contentsline {section}{\numberline {10}Matroid Theory}{15}%
+\contentsline {section}{\numberline {11}Probability Theory}{15}%
+\contentsline {section}{\numberline {12}Statistics}{15}%
+\contentsline {section}{\numberline {13}Combinatorial Species}{15}%
+\contentsline {section}{\numberline {14}Combinatorial Optimization}{16}%
+\contentsline {subsection}{\numberline {14.1}The Minimal Path Problem}{17}%
+\contentsline {subsection}{\numberline {14.2}Traveling Salesperson Problem}{18}%
+\contentsline {subsection}{\numberline {14.3}The Vehicle Routing Problems}{18}%
+\contentsline {subsection}{\numberline {14.4}The Automated Industrialization Problem}{18}%
+\contentsline {section}{\numberline {15}Random Graphs}{18}%
+\contentsline {section}{\numberline {16}Combinatorial Games}{18}%
+\contentsline {subsection}{\numberline {16.1}Combinatorial Games on Hypergraphs}{18}%
+\contentsline {subsection}{\numberline {16.2}Combinatorial Card Games}{20}%
+\contentsline {subsection}{\numberline {16.3}Combinatorial Economic Games}{20}%
+\contentsline {section}{\numberline {17}Cryptography}{20}%
+\contentsline {section}{\numberline {18}Game Theory}{20}%
+\contentsline {section}{\numberline {19}Turing Machines}{20}%
+\contentsline {section}{\numberline {20}Algorithms}{20}%
+\contentsline {section}{\numberline {21}Game of Life}{20}%
+\contentsline {section}{\numberline {22}Dynamic Games}{20}%
+\contentsline {section}{\numberline {23}Board Games}{20}%
+\contentsline {section}{\numberline {24}Card Games}{20}%
+\contentsline {section}{\numberline {25}Deck Games}{20}%
+\contentsline {subsection}{\numberline {25.1}Poker}{21}%
+\contentsline {section}{\numberline {26}Mixed Structure Games}{22}%
+\contentsline {section}{\numberline {27}Mod Theory}{22}%
+\contentsline {section}{\numberline {28}Economic Games}{22}%
+\contentsline {section}{\numberline {29}Agent Theory}{22}%
+\contentsline {section}{\numberline {30}Strategies}{22}%
+\contentsline {section}{\numberline {31}Balance Theory}{22}%
+\contentsline {section}{\numberline {32}Portfolio Theory}{22}%
+\contentsline {section}{\numberline {33}Practical Code}{22}%
+\contentsline {section}{\numberline {34}Data}{22}%
+\contentsline {section}{\numberline {35}Stochastic Partial Differential Equations}{22}%
+\contentsline {section}{\numberline {36}The Automated Galactic Colonization Problem}{22}%

@@ -1,0 +1,448 @@
+\documentclass[]{article}
+
+
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+
+
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{proposition}{Proposição}[section]
+\newtheorem{lemma}{Lema}[section]
+\newtheorem{algo}{Algoritmo}[section]
+\newtheorem{coro}{Corolário}[section]
+\newtheorem*{remark}{Remark}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{problem}{Problema}[section]
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}[section]
+
+\newcommand{\ck}{\textbf{CK}}
+\newcommand{\ttt}{\textbf{TTT}}
+\newcommand{\grid}{\textbf{Grid}}
+\newcommand{\raw}{\rightarrow}
+\newcommand{\ie}{\textit{i.e.}}
+\newcommand{\eg}{\textit{e.g.}}
+\newcommand{\bb}{\mathbb}
+\newcommand{\x}{\textbf{x}}
+\newcommand{\oz}{\textbf{o}}
+\newcommand{\mum}{^{-1}}
+\newcommand{\sa}{\overline{\text{span}}}
+\newcommand{\cax}{\mathcal{X}}
+\newcommand{\cay}{\mathcal{Y}}
+\newcommand{\caw}{\mathcal{W}}
+\newcommand{\monoxy}{\text{Mono}_\mathcal{Y}^\mathcal{X}}
+
+
+%opening
+\title{Programação Linear e Polítopos}
+\author{Henrique Tavares}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+\section{Introdução}
+
+\begin{definition}
+	Um problema de programação linear (\textbf{PPL}) é um trio $(A, b, c)$ onde $A \in \text{End}(\bb{R}^m, \bb{R}^n), b \in \bb{R}^n, c \in \bb{R}^m$.
+\end{definition}
+
+
+
+\textbf{Problema:} 
+Uma pessoa quer consumir no mínimo 50g de proteína, 30g de carboidratos e 20g de gordura por dia. Ela pode escolher entre dois alimentos, A e B. Cada porção de A contém 10g de proteína, 20g de carboidratos e 5g de gordura. Cada porção de B contém 5g de proteína, 5g de carboidratos e 10g de gordura. Se cada porção de A custa R\$5 e cada porção de B custa R\$4, quantas porções de A e B a pessoa deve comprar para minimizar os custos, satisfazendo as necessidades diárias?
+
+\textbf{Modelo matemático:}
+\begin{align*}
+\text{Minimizar:} \quad & Z = 5A + 4B \\
+\text{Sujeito a:} \\
+& 10A + 5B \geq 50 \quad & \text{(proteína)} \\
+& 20A + 5B \geq 30 \quad & \text{(carboidratos)} \\
+& 5A + 10B \geq 20 \quad & \text{(gordura)} \\
+& A, B \geq 0
+\end{align*}
+
+\section*{Exemplo 2: Produção de Produtos}
+
+\textbf{Problema:} 
+Uma fábrica produz dois tipos de produtos, X e Y. Cada unidade de X requer 2 horas na máquina A e 1 hora na máquina B. Cada unidade de Y requer 1 hora na máquina A e 2 horas na máquina B. No máximo, a máquina A pode ser usada 8 horas por dia e a máquina B pode ser usada 6 horas por dia. Se o lucro por unidade de X é R\$5 e o lucro por unidade de Y é R\$6, quantas unidades de X e Y a fábrica deve produzir para maximizar o lucro?
+
+\textbf{Modelo matemático:}
+\begin{align*}
+\text{Maximizar:} \quad & Z = 5X + 6Y \\
+\text{Sujeito a:} \\
+& 2X + Y \leq 8 \quad & \text{(máquina A)} \\
+& X + 2Y \leq 6 \quad & \text{(máquina B)} \\
+& X, Y \geq 0
+\end{align*}
+
+\section*{Exemplo 3: Problema de Transporte}
+
+\textbf{Problema:} 
+Uma empresa tem duas fábricas, F1 e F2, com produções diárias de 10 e 20 unidades, respectivamente. Essas unidades precisam ser enviadas para três depósitos, D1, D2 e D3, que precisam de 5, 8 e 17 unidades, respectivamente. Os custos de transporte por unidade são dados pela tabela:
+\begin{center}
+	\begin{tabular}{c|ccc}
+		& D1 & D2 & D3 \\
+		\hline
+		\text{F1} & 8 & 6 & 10 \\
+		\text{F2} & 9 & 7 & 4 \\
+	\end{tabular}
+\end{center}
+Quanto de cada fábrica deve ser enviado para cada depósito para minimizar os custos?
+
+\textbf{Modelo matemático:}
+\begin{align*}
+\text{Minimizar:} \quad & Z = 8x_{11} + 6x_{12} + 10x_{13} + 9x_{21} + 7x_{22} + 4x_{23} \\
+\text{Sujeito a:} \\
+& x_{11} + x_{12} + x_{13} = 10 \quad & \text{(produção de F1)} \\
+& x_{21} + x_{22} + x_{23} = 20 \quad & \text{(produção de F2)} \\
+& x_{11} + x_{21} = 5 \quad & \text{(demanda de D1)} \\
+& x_{12} + x_{22} = 8 \quad & \text{(demanda de D2)} \\
+& x_{13} + x_{23} = 17 \quad & \text{(demanda de D3)} \\
+& x_{ij} \geq 0 \quad & \text{para todo } i,j
+\end{align*}
+
+\section{TSP}
+
+
+O Problema do Caixeiro Viajante (Traveling Salesman Problem - TSP) é um problema clássico de otimização. Dado um conjunto de cidades e as distâncias entre elas, o objetivo é encontrar a menor rota possível que visita cada cidade exatamente uma vez e retorna à cidade de origem.
+
+A formulação do TSP em termos de programação linear é um pouco mais complicada do que os exemplos anteriores que discutimos, principalmente porque precisa-se adicionar restrições para evitar subciclos (isto é, ciclos que não incluem todas as cidades). Vamos à formulação:
+
+
+\textbf{Formulação do Problema do Caixeiro Viajante (TSP) em Programação Linear:}
+
+Seja:
+\begin{itemize}
+	\item \( n \) o número de cidades.
+	\item \( c_{ij} \) o custo de viajar da cidade \( i \) para a cidade \( j \).
+	\item \( x_{ij} \) uma variável binária que será igual a 1 se o caixeiro viaja da cidade \( i \) para a cidade \( j \) e 0 caso contrário.
+	\item \( u_i \) uma variável auxiliar que ajudará a evitar subciclos.
+\end{itemize}
+
+\textbf{Formulação:}
+\begin{align*}
+\text{Minimizar:} \quad & \sum_{i=1}^{n} \sum_{j=1, j \neq i}^{n} c_{ij} x_{ij} \\
+\text{Sujeito a:} \\
+& \sum_{j=1, j \neq i}^{n} x_{ij} = 1, \quad & \forall i = 1, \dots, n \quad\\
+& \sum_{i=1, i \neq j}^{n} x_{ij} = 1, \quad & \forall j = 1, \dots, n \quad \\
+& u_i - u_j + nx_{ij} \leq n-1, \quad & \forall 2 \leq i \neq j \leq n \quad \\
+& x_{ij} \in \{0,1\}, \quad & \forall i,j = 1, \dots, n \\
+& u_i \geq 0, \quad & \forall i = 1, \dots, n
+\end{align*}
+
+(Sair de cada cidade exatamente uma vez)
+
+(Entrar em cada cidade exatamente uma vez)
+
+(Restrições para evitar subciclos)
+
+
+\section{Poliedros e Polítopos}
+
+\begin{definition}
+	 Um poliedro é o conjunto dos pontos $x$ satisfazendo $Ax \leq b$, onde $A$ é um operador entre $\mathbb{R}^m$ e $\mathbb{R}^n$ e $b \in \mathbb{R}^m$. Um polítopo é um poliedro limitado. Assim, o conjunto das soluções viáveis de um problema de programação linear é um poliedro. 
+	
+\end{definition}
+
+
+Um \textbf{poliedro} pode ser imaginado como uma forma tridimensional que é formada por faces planas e retas. Em matemática, um poliedro é definido como o conjunto de pontos que satisfazem um conjunto de desigualdades lineares. Um \textbf{polítopo} é uma versão limitada de um poliedro. Pode-se pensar num polítopo como um poliedro que tem um volume finito, enquanto um poliedro pode se estender indefinidamente em uma ou mais direções.
+
+\section*{Exemplos de Polítopos e Poliedros}
+
+\subsection*{Exemplo 1 (Poliedro - Programação Linear)}
+\begin{align}
+\text{Maximizar:} \quad & x_1 \\
+\text{Sujeito a:} \quad & x_1 + x_2 \leq 3 \\
+& x_1, x_2 \geq 0
+\end{align}
+
+\subsection*{Exemplo 2 (Polítopo - Não advindo de Programação Linear)}
+O conjunto de pontos \((x_1, x_2)\) que satisfazem:
+\begin{align}
+x_1 + x_2 & \leq 1 \\
+x_1 &\geq 0 \\
+x_2 &\geq 0 \\
+x_1 + x_2 &\geq 1
+\end{align}
+
+
+
+
+
+Dado um problema de programação linear na forma padrão:
+\begin{align*}
+\text{Maximizar:} \quad & c^T x \\
+\text{Sujeito a:} \quad & Ax \leq b \\
+& x \geq 0 
+\end{align*}
+
+onde \( A \) é uma matriz \( m \times n \), \( c \) e \( x \) são vetores \( n \times 1 \), e \( b \) é um vetor \( m \times 1 \).
+
+
+O método Simplex explora a estrutura geométrica do poliedro das soluções viáveis (ou seja, o conjunto de pontos $x$ que satisfazem $Ax \leq b$ e $x \geq 0$).
+
+Passos Básicos:
+Iniciação: Comece com uma solução básica viável (um vértice do poliedro).
+
+Critério de Parada: Se a solução atual é ótima, pare. Isso é determinado quando todos os coeficientes na linha objetivo (que representa a função objetivo) são não-negativos.
+
+Direção de Movimento: Escolha uma variável não básica com coeficiente negativo na linha objetivo para aumentar. Esta variável entra na base. Isso corresponde a mover-se ao longo de uma aresta do poliedro na direção de melhoria.
+
+Determinação do Passo: Continue movendo-se ao longo da aresta até atingir um novo vértice do poliedro. Ao longo do caminho, uma variável básica tornar-se-á zero. Esta variável sairá da base. O tamanho do passo (quão longe você se move ao longo da aresta) é determinado pela variável que se torna zero primeiro.
+
+Iteração: Retorne ao passo 2 com a nova solução básica viável e repita até que o critério de parada seja satisfeito.
+
+Observações:
+A beleza do método Simplex reside no fato de que, em vez de considerar todos os pontos viáveis, ele considera apenas um subconjunto de pontos que são os vértices (ou cantos) do poliedro das soluções viáveis. Uma propriedade importante da programação linear é que, se uma solução ótima existe, pelo menos uma delas está em um vértice do poliedro.
+
+O método Simplex, em sua forma padrão, é projetado para problemas de maximização. Para problemas de minimização, o problema pode ser transformado em um de maximização ou o método Simplex pode ser adaptado para lidar com minimizações.
+
+Embora o método Simplex seja eficiente na prática para muitos problemas, ele tem um tempo de execução exponencial no pior caso. No entanto, variantes do Simplex e outros algoritmos, como o método do ponto interior, têm sido desenvolvidos para tratar desses casos problemáticos.
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\newpage
+
+
+
+
+
+
+\section{Introduction}
+
+\begin{definition}
+	A  Linear Programming Problem (\textbf{LPP}) is a triple $(A, b, c)$ where $A \in \text{End}(\bb{R}^m, \bb{R}^n), b \in \bb{R}^n, c \in \bb{R}^m$.
+\end{definition}
+
+
+\textbf{Problem:}
+A person wants to consume at least 50g of protein, 30g of carbohydrates, and 20g of fat per day. They can choose between two foods, A and B. Each portion of A contains 10g of protein, 20g of carbohydrates, and 5g of fat. Each portion of B contains 5g of protein, 5g of carbohydrates, and 10g of fat. If each portion of A costs R$5 and each portion of B costs R$4, how many portions of A and B should the person buy to minimize the costs while meeting the daily requirements?
+
+\textbf{Mathematical Model:}
+\begin{align*}
+\text{Minimize:} \quad & Z = 5A + 4B \\
+\text{Subject to:} \\
+& 10A + 5B \geq 50 \quad & \text{(protein)} \\
+& 20A + 5B \geq 30 \quad & \text{(carbohydrates)} \\
+& 5A + 10B \geq 20 \quad & \text{(fat)} \\
+& A, B \geq 0
+\end{align*}
+
+\section*{Example 2: Production of Products}
+
+\textbf{Problem:}
+A factory produces two types of products, X and Y. Each unit of X requires 2 hours on machine A and 1 hour on machine B. Each unit of Y requires 1 hour on machine A and 2 hours on machine B. At most, machine A can be used for 8 hours a day, and machine B can be used for 6 hours a day. If the profit per unit of X is R$5 and the profit per unit of Y is R$6, how many units of X and Y should the factory produce to maximize profit?
+
+\textbf{Mathematical Model:}
+\begin{align*}
+\text{Maximize:} \quad & Z = 5X + 6Y \\
+\text{Subject to:} \\
+& 2X + Y \leq 8 \quad & \text{(machine A)} \\
+& X + 2Y \leq 6 \quad & \text{(machine B)} \\
+& X, Y \geq 0
+\end{align*}
+
+Note: The symbol "R\$" stands for Brazilian Real, the official currency of Brazil.
+
+
+
+
+
+\section*{Example 3: Transportation Problem}
+
+\textbf{Problem:} 
+A company has two factories, F1 and F2, with daily productions of 10 and 20 units, respectively. These units need to be sent to three warehouses, D1, D2, and D3, which require 5, 8, and 17 units, respectively. The transportation costs per unit are given by the table:
+\begin{center}
+	\begin{tabular}{c|ccc}
+		& D1 & D2 & D3 \\
+		\hline
+		\text{F1} & 8 & 6 & 10 \\
+		\text{F2} & 9 & 7 & 4 \\
+	\end{tabular}
+\end{center}
+How much from each factory should be sent to each warehouse to minimize costs?
+
+\textbf{Mathematical Model:}
+\begin{align*}
+\text{Minimize:} \quad & Z = 8x_{11} + 6x_{12} + 10x_{13} + 9x_{21} + 7x_{22} + 4x_{23} \\
+\text{Subject to:} \\
+& x_{11} + x_{12} + x_{13} = 10 \quad & \text{(production from F1)} \\
+& x_{21} + x_{22} + x_{23} = 20 \quad & \text{(production from F2)} \\
+& x_{11} + x_{21} = 5 \quad & \text{(demand from D1)} \\
+& x_{12} + x_{22} = 8 \quad & \text{(demand from D2)} \\
+& x_{13} + x_{23} = 17 \quad & \text{(demand from D3)} \\
+& x_{ij} \geq 0 \quad & \text{for all } i,j
+\end{align*}
+
+\section{TSP}
+
+The Traveling Salesman Problem (TSP) is a classic optimization problem. Given a set of cities and the distances between them, the goal is to find the shortest possible route that visits each city exactly once and returns to the original city.
+
+The formulation of TSP in terms of linear programming is a bit more complex than the previous examples we discussed, mainly because we need to add constraints to avoid subcycles (that is, cycles that don't include all cities). Let's look at the formulation:
+
+\textbf{Formulation of the Traveling Salesman Problem (TSP) in Linear Programming:}
+
+
+Let:
+\begin{itemize}
+	\item \( n \) be the number of cities.
+	\item \( c_{ij} \) be the cost of traveling from city \( i \) to city \( j \).
+	\item \( x_{ij} \) be a binary variable that is equal to 1 if the salesman travels from city \( i \) to city \( j \) and 0 otherwise.
+	\item \( u_i \) be an auxiliary variable that will help to avoid subcycles.
+\end{itemize}
+
+\textbf{Formulation:}
+\begin{align*}
+\text{Minimize:} \quad & \sum_{i=1}^{n} \sum_{j=1, j \neq i}^{n} c_{ij} x_{ij} \\
+\text{Subject to:} \\
+& \sum_{j=1, j \neq i}^{n} x_{ij} = 1, \quad & \forall i = 1, \dots, n \quad\\
+& \sum_{i=1, i \neq j}^{n} x_{ij} = 1, \quad & \forall j = 1, \dots, n \quad \\
+& u_i - u_j + nx_{ij} \leq n-1, \quad & \forall 2 \leq i \neq j \leq n \quad \\
+& x_{ij} \in \{0,1\}, \quad & \forall i,j = 1, \dots, n \\
+& u_i \geq 0, \quad & \forall i = 1, \dots, n
+\end{align*}
+
+(Leave from each city exactly once)
+
+(Enter each city exactly once)
+
+(Restrictions to avoid subcycles)
+
+\section{Polyhedra and Polytopes}
+
+\begin{definition}
+	A polyhedron is the set of points \( x \) satisfying \( Ax \leq b \), where \( A \) is an operator between \( \mathbb{R}^m \) and \( \mathbb{R}^n \) and \( b \) belongs to \( \mathbb{R}^m \). A polytope is a bounded polyhedron. Thus, the set of feasible solutions of a linear programming problem is a polyhedron.
+\end{definition}
+
+
+A \textbf{polyhedron} can be imagined as a three-dimensional shape formed by flat and straight faces. In mathematics, a polyhedron is defined as the set of points that satisfy a set of linear inequalities. A \textbf{polytope} is a bounded version of a polyhedron. One can think of a polytope as a polyhedron that has a finite volume, while a polyhedron can extend indefinitely in one or more directions.
+
+\section*{Examples of Polytopes and Polyhedra}
+
+\subsection*{Example 1 (Polyhedron - Linear Programming)}
+\begin{align}
+\text{Maximize:} \quad & x_1 \\
+\text{Subject to:} \quad & x_1 + x_2 \leq 3 \\
+& x_1, x_2 \geq 0
+\end{align}
+
+\subsection*{Example 2 (Polytope - Not from Linear Programming)}
+The set of points \((x_1, x_2)\) that satisfy:
+\begin{align}
+x_1 + x_2 & \leq 1 \\
+x_1 &\geq 0 \\
+x_2 &\geq 0 \\
+x_1 + x_2 &\geq 1
+\end{align}
+
+\section*{Descriptions of Geometric Shapes as Polytopes}
+
+\subsection*{Square}
+
+Consider a square with side length \( s \) in a 2-dimensional space. The square can be described by the following inequalities:
+\begin{align*}
+0 &\leq x \leq s \\
+0 &\leq y \leq s
+\end{align*}
+In the polytope context, this square is described by the intersection of four half-spaces defined by the lines \( x = 0 \), \( x = s \), \( y = 0 \), and \( y = s \).
+
+\subsection*{Triangle}
+
+Consider an equilateral triangle with side length \( s \) in a 2-dimensional space. Without loss of generality, let's place one vertex at the origin. The triangle can be described by the following inequalities:
+\begin{align*}
+x &\geq 0 \\
+y &\geq 0 \\
+y &\leq -\frac{\sqrt{3}}{s}x + \sqrt{3}s
+\end{align*}
+Here, the triangle is defined by the intersection of three half-spaces: one along the x-axis, one along the y-axis, and one defined by the line \( y = -\frac{\sqrt{3}}{s}x + \sqrt{3}s \).
+
+\subsection*{Tetrahedron}
+
+Consider a regular tetrahedron with side length \( s \) in a 3-dimensional space. Placing one vertex at the origin, the tetrahedron can be described by the following inequalities:
+\begin{align*}
+x &\geq 0 \\
+y &\geq 0 \\
+z &\geq 0 \\
+z &\leq \sqrt{\frac{2}{3}}s - \sqrt{\frac{2}{3}} \left( x + \frac{y}{\sqrt{3}} \right)
+\end{align*}
+This tetrahedron is defined by the intersection of four half-spaces: three of them are planes defined by the coordinate axes and the fourth one is determined by the plane \( z = \sqrt{\frac{2}{3}}s - \sqrt{\frac{2}{3}} \left( x + \frac{y}{\sqrt{3}} \right) \).
+
+
+
+\begin{definition}
+	Let $P = (A, b, c)$ be a \textbf{LPP}. We define the set 
+	
+	\begin{center}
+		$F(P) := \{ x \in \bb{R}^n\ | \ Ax \leq b, 0 \leq x\}$.
+	\end{center}
+
+	This is called the set of feasible solutions.
+	 
+\end{definition}
+
+The set $F(P)$ of feasible solutions to a \textbf{LPP} $P$ is a polytope.
+
+Given a linear programming problem $(A, b, c)$, or in standard form:
+\begin{align*}
+\text{Maximize:} \quad & c^T x \\
+\text{Subject to:} \quad & Ax \leq b \\
+& x \geq 0 
+\end{align*}
+
+where $A$ is an $ m \times n $ matrix, $ c $ and $ x $ are $ n \times 1 $ vectors, and $ b $ is an $ m \times 1 $ vector.
+
+The Simplex method explores the geometric structure of the polyhedron of feasible solutions $F(P)$ (that is, the set of points \( x \) that satisfy \( Ax \leq b \) and \( x \geq 0 \)).
+
+Basic Steps:
+Initialization: Start with a basic feasible solution (a vertex of the polyhedron).
+
+Stopping Criterion: If the current solution is optimal, stop. This is determined when all coefficients in the objective row (which represents the objective function) are non-negative.
+
+Direction of Movement: Choose a non-basic variable with a negative coefficient in the objective row to increase. This variable enters the basis. This corresponds to moving along an edge of the polyhedron in the direction of improvement.
+
+Step Determination: Continue moving along the edge until you reach a new vertex of the polyhedron. Along the way, a basic variable will become zero. This variable will exit the basis. The step size (how far you move along the edge) is determined by the variable that becomes zero first.
+
+Iteration: Return to step 2 with the new basic feasible solution and repeat until the stopping criterion is met.
+
+Remarks:
+The beauty of the Simplex method lies in the fact that, instead of considering all feasible points, it considers only a subset of points that are the vertices (or corners) of the polyhedron of feasible solutions. An important property of linear programming is that if an optimal solution exists, at least one of them is at a vertex of the polyhedron.
+
+The Simplex method, in its standard form, is designed for maximization problems. For minimization problems, the problem can be transformed into one of maximization, or the Simplex method can be adapted to handle minimizations.
+
+Although the Simplex method is efficient in practice for many problems, it has exponential runtime in the worst case. However, variants of the Simplex and other algorithms, such as the interior point method, have been developed to address these problematic cases.
+
+\begin{definition}
+	Let $P \subset \bb{R}^n$ be a polytope, a face of $P$ is a subset $F \subset P$ such that there exists a hyperplane $H \subset \bb{R}^n$ with $F = P \cap H$.
+\end{definition}
+
+\begin{proposition}
+	 Let $P$ be a polytope and $x \in \bb{R}^n$. The set of points $P_x$ such that $\forall y, z \in P_x, $
+	  
+\end{proposition}
+
+
+
+\end{document}
+
+
+
+

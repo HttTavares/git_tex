@@ -1,0 +1,41 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage[brazil]{babel}
+\usepackage{amsmath, amssymb, amsthm, graphicx}
+\usepackage{geometry}
+\geometry{a4paper, left=3cm, right=2cm, top=3cm, bottom=2cm}
+
+\title{Conjunto de Cantor}
+\author{}
+\date{}
+
+\begin{document}
+	\maketitle
+	
+	\section{Introdução}
+	
+	O Conjunto de Cantor, nomeado em homenagem ao matemático alemão Georg Cantor, é um exemplo fascinante e contra-intuitivo de um conjunto que desafia muitas de nossas intuições iniciais sobre tamanho, medida e continuidade. Embora seja um conjunto não contável e tenha medida de Lebesgue zero, é surpreendentemente denso, contendo tantos pontos quanto o intervalo unitário.
+	
+	\section{Definição}
+	
+	A construção do Conjunto de Cantor começa com o intervalo unitário \([0, 1]\). No primeiro passo, removemos o terço médio do intervalo, deixando dois segmentos: \([0, \frac{1}{3}]\) e \([\frac{2}{3}, 1]\). No segundo passo, repetimos o processo para esses dois segmentos, removendo o terço médio de cada um. Continuamos esse processo indefinidamente, removendo o terço médio de cada segmento restante em cada etapa subsequente.
+	
+	O Conjunto de Cantor é o conjunto de todos os pontos no intervalo \([0, 1]\) que nunca são removidos em nenhum dos passos infinitos dessa construção. Surpreendentemente, apesar de termos removido tantos subintervalos, ainda sobram muitos pontos!
+	
+	\section{Propriedades e Importância}
+	
+	O Conjunto de Cantor possui várias propriedades notáveis:
+	
+	\begin{itemize}
+		\item \textbf{Não contabilidade:} Embora pareça que muitos pontos são removidos durante a construção, o Conjunto de Cantor é na verdade não contável.
+		\item \textbf{Medida zero:} O total "comprimento" dos pontos removidos converge para o intervalo unitário, deixando o Conjunto de Cantor com uma medida (ou "comprimento") de Lebesgue zero.
+		\item \textbf{Densidade:} Cada ponto no Conjunto de Cantor é um ponto de acumulação, o que significa que para qualquer ponto no conjunto, existem outros pontos arbitrariamente próximos a ele.
+	\end{itemize}
+	
+	O estudo do Conjunto de Cantor e objetos relacionados ajudou a fundamentar a teoria da medida e a teoria dos conjuntos, duas áreas fundamentais da matemática moderna. Além disso, tem aplicações em análise real, teoria do caos e até em teoria da computação.
+	
+\end{document}
+
+
+

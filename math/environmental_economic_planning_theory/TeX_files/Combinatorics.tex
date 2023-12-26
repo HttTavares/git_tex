@@ -1,0 +1,571 @@
+\chapter{Combinatorics}
+
+
+\begin{proposition}
+	
+	Let $X, Y$ be finite sets. The number of maps from $X$ to $Y$ is $|Y|^{|X|}$. In other words:
+	
+	\begin{center}
+		$|Y^X| = |Y|^{|X|}$
+	\end{center}
+	
+\end{proposition}
+
+\begin{proof}
+	We proceed by induction on $|X|$. Let $Y=\{y_1, ..., y_m \}$. If $|X| = 1$, say $X = \{x\}$. Given $1 \leq i \leq m$, denote $f_i:X \raw Y$, the map given by $f_i(x)=y_i$. There are $m$ of these maps, and any map $f:X \raw Y$ has to be one of these, and therefore there are $|Y|^{|X|} = m^1$ maps in $Y^X$.
+	
+	Assuming the assertion true for all sets $X$ such that $|X|=n$, let us prove it in the case where $|X|= n+1$.	
+	
+	(finish)
+\end{proof}
+
+\begin{proposition}
+	Let $X$ be a set with cardinality $|X|$. For every $n\leq|X|$ there are exactly $\binom{|X|}{n}$ different subsets of $X$ with cardinality $n$.
+\end{proposition}
+
+\begin{proposition}
+	Let $X, Y$ be two finite sets with the same cardinality, say $n$. Then there are $n!$ bijections between them. Symbolically:
+	
+	\begin{center}
+		$|\text{Bij}(X, Y)| = n!$
+	\end{center}
+\end{proposition}
+
+\begin{proof}
+	We shall prove the assertion in the case where $Y=X$, since the general case follows from this using the fact that $|\text{Bij}(X, Y)| \simeq |\text{Bij}(X, X)|$ for all sets $X, Y$.
+	
+	We prove it via induction on $n$. The case where $n=1$ is trivial. Assume then, that for all sets $S_1, S_2$ with cardinality $|S| \leq n$, we have $|\text{Bij}(S_1, S_2)| = n!$, and let $X$ be a set with $|X|=n+1$.
+	
+	Choose any element $x_1 \in X$. Then we have $|X \setminus \{x \}|=n$, and there
+	
+	(finish)
+\end{proof}
+
+
+
+
+
+\begin{proposition}
+	If $X$ is a finite set, then $|2^X| =2^{|X|}$.
+\end{proposition}
+
+\begin{proof}
+	(finish)
+\end{proof}
+
+\begin{proposition}\label{uniquesetcardinality}
+	Given a finite set $X$, there exists a unique $n \in \bb{N}$ for which there is a bijection $f:X \raw [1, n]_{\bb{N}}$.
+\end{proposition}
+
+\begin{definition}\label{cardinality}
+	Given a finite set $X$, by proposition (ref), there exists a unique $n$ and bijection between $X$ and $[1, n]_{\bb{N}}$. This unique $n$ depending exclusively on the set $X$ is called the cardinality of $X$ and is denoted by $|X|$.
+\end{definition}
+
+\begin{proposition}
+	If $X, Y$ are finite sets such that $|X| \leq |Y|$ 
+\end{proposition}
+
+\begin{proposition}
+	Let $X, Y, Z$ be sets, and let $f:Y\raw Z$ be a bijection. Then the map $\phi:Y^X \raw Z^X$ given by $\phi(g)=g\circ f$ is a bijection between $Y^X$ and $Z^X$.
+\end{proposition}
+
+As a result we have:
+
+\begin{coro}
+	If $X, Y, Z$ are finite sets, then $|Y^X|=|Z^X|$.
+\end{coro}
+
+\subsection{Multisets}
+
+\begin{definition}
+	A multiset is a pair $X = (X^0, \mu)$ where $X^0$ is a set and $\mu: X^0 \raw \bb{N}$ is a multiplicity map. If $x \in X^0$, the value $\mu(x)$ is called the multiplicity of $x$ in $X$.
+\end{definition}
+
+If no confusion is likely, we shall abuse notation slightly and denote both the pair and the underlying set by the same symbol. Additionally, for clarity we may denote the multiplicity map by $\mu_X$.
+
+\begin{exmp}
+	Consider the following elementary examples and notations for multisets.
+	
+	\begin{enumerate}
+		\item $(\{x\}, \mu)$, where $\mu(x)=a$ for some $a \in \bb{N}$, will also be denoted $\{x^{\times a} \}$.
+		
+		\item $(\{x, y, z\}, \mu)$, where $\mu(x)=a, \mu(y)=b, \mu(z)=c$ for some $a, b, c \in \bb{N}$, will also be denoted $\{x^{\times a},y^{\times b}, z^{\times c} \}$.
+	\end{enumerate}
+	
+	
+\end{exmp}
+
+\begin{definition}
+	Let $X = (X^0, \mu)$ be a multiset. There is an important associate set, which is given by $M(X) := \{(x, i); \ x \in X, 1\leq i \leq \mu(X) \}$. 	
+\end{definition}
+
+Multisets generalize sets in the sense that every set $X$ can be seen as a multiset with multiplicity map given $\mu(x)=1$ for all $x \in X$.
+
+\begin{definition}
+	Let $X, Y$ be multisets. A map between multisets is a map $f:M(X) \raw M(Y)$. We extend the notation of the set of all maps between two sets to multisets, \ie, we denote $Y^X=\{f:M(X) \raw M(Y) \}$. Two maps $f, g: X \raw Y$ are called equivalent whenever they satisfy the following property:
+	
+	\begin{center}
+		(finish)
+	\end{center}
+\end{definition}
+
+It is readily seen that this reduces to the usual notion of a map between sets if $X$ and $Y$ are normal sets. A particular case of interest for combinatorics is when $X$ is a multiset and $Y$ is a set, and we consider equivalence classes of maps between them. This case is a good model for the situation where you indistiguishable balls being placed on cells randomly.
+
+\begin{proposition}
+	Let $X=(\{x\}, \mu)$, where $\mu(x) = n$, and consider $Y = [1, m]_{\bb{N}} = \{1, ..., m \}$. There are $\binom{n-1}{m-1}$ multiset maps $f:X \raw Y$. Symbolically:
+	
+	\begin{center}
+		$|Y^X|= \binom{n-1}{m-1}$
+	\end{center}
+\end{proposition}
+
+\begin{proof}
+	Let $f \in Y^X$, we denote, for each $1 \leq i \leq m$, $n_i^f=|f\mum(i)|$, \ie, the amount of elements of $M(X)$ whose image is $i$. We have that $\sum_i n_i^f = n$. We claim that there is a bijection (finish)
+\end{proof}
+
+\begin{definition}
+	Let $X=(X, \mu_X)$ be a multiset. A multisubset is a pair $Y=(Y^0, \mu_Y)$ such that $Y^0 \subset X^0$, and $\mu_Y(y)\leq\mu_X(y)$ for all $y \in Y^0$.
+\end{definition}
+
+\begin{proposition}
+	Let $X=(X^0, \mu)$ be a multiset and $Y$ a set. Then there are 
+\end{proposition}
+
+
+
+\subsection{Equivalent Definitions of Multiset}
+
+\begin{definition}
+	A multiset is a pair $(X, \sim)$, where $X$ is a set and $\sim$ is an equivalence relation on $X$.
+\end{definition}
+
+\subsection{Words}
+
+Let $X$ be a set. A word on $X$ is a sequence $x = (x_1, x_2, ...)$ of elements $x_j$ of $X$. It can also be denoted $x=x_1x_2...$. If the sequence is finite, the size of the word, denoted $|x|$ is the number of elements in the sequence, and if the sequence is infinite, we say the word has infinite size, and write $|x| = \omega$.
+
+
+
+\subsection{Permutations}
+
+In this subsection we fix $X = \bb{Z}_n$, for some $n$, and shall study permutations on $X$. 
+
+\begin{definition}
+	A permutation on any set is a bijection of the set into itself.
+\end{definition}
+
+In order to facilitate our presentation of permutations, we introduction the following notation:
+
+\begin{definition}
+	Let $x_1, y_1, x_2, y_2. .., x_n, y_n \in X$, and $\phi:X\raw X$ be a selfmap. We write $\phi(x_1, x_2, ..., x_n) = y_1,y_2, ..., y_n$ to mean $\phi(x_j) = y_j$, $j=1,...,n$.
+\end{definition}
+
+\begin{exmp}
+	Let us look at low values of $n$.
+	
+	\begin{enumerate}
+		\item 	Let $n=1$, so that $X = \{1\}$. It is clear that there is a single bijection $\phi: X \raw X$ given by $\phi(1)=1$. It is even true that this is the only selfmap on $X$. We denote this bijection by the symbol $(1)$.
+		
+		\item Let $n=2$, so that $X = \{1,2 \}$. We then have two possibilities, either $\phi(1,2)=1,2$ or $\phi(1,2)=2,1$. We denote the first bijection by $(12)$ and the second one by $(1)(2)$.
+		
+		\item Let $n=3$, so that $X = \{1,2, 3 \}$. We have 6 possibilities:
+		
+		$$\begin{array}{ccc}
+		\phi(1,2,3)=1,2,3	& \phi(1,2,3)= 2,1,3 & \phi(1,2,3)= 3,1,2 \\ 
+		\phi(1,2,3)= 1,3,2 & \phi(1,2,3)= 2,3,1 & \phi(1,2,3)= 3,2,1
+		\end{array}$$ 
+	\end{enumerate}
+\end{exmp}
+
+Generalizing the notation in the previous items, we introduce:
+
+\begin{definition}
+	Let $r \leq n$, and let $i_1, ...,  i_r$ be pairwise distinct numbers such that $1 \leq i_j \leq n$, $j=1, ..., r$. We define the bijection $(i_1\ i_2\ ...\ i_{j-1}\ i_j):X\raw X$ given by
+	
+	\begin{flalign*}
+	(i_1\ i_2\ ...\ i_{j-1}\ i_j)(i_r) & =i_1 \\
+	(i_1\ i_2\ ...\ i_{j-1}\ i_j)(i_j) & =i_{j+1}, j\neq r	\\ 
+	(i_1\ i_2\ ...\ i_{j-1}\ i_j)(x) & =x, x \neq i_j		
+	\end{flalign*}
+	
+	\noindent These bijections are called cycles, or $r$-cycles to emphasize the size of the cycle. A $2$-cycle is also called a transposition. 
+\end{definition}
+
+Notice the space between the numbers $i_j$. There are problems with this notation, for example, if we are dealing with $\bb{Z}_{15}$, it might lead to mistakes if we consider $(1\ 2\ 3)$ and $(12\ 3)$.
+
+
+\begin{exmp}
+	We provide some basic examples
+	\begin{enumerate}
+		\item 	The permutations in example (ref)(3) are all cycles and can be written respectively as:
+		$$\begin{array}{ccc}
+		\phi = \iota	& \phi = (1\ 2) & \phi = (1\ 2\ 3) \\ 
+		\phi =(2\ 3) & \phi = (1\ 3\ 2) & \phi = (1\ 3)
+		\end{array}$$ 
+		
+		\item the $r$-cycle $(1\ 2\ 3...\ (r-1)\ r)$ is such that $ (1\ 2\ 3...\ (r-1)\ r)j = j+1$, if $1 \leq j < r$, and $(1\ 2\ 3...\ (r-1)\ r)r=1$.
+		
+		\item Just as any map, permutations can be composed, sometimes compositions of cycles are again cycles. For example, we have $(1 \ 2)(1 \ 3) = (1 \ 3 \ 2)$. 
+	\end{enumerate}
+	
+\end{exmp}
+
+
+\begin{definition}
+	The support of a permutation $\phi \in \text{perm}(X)$ is the set of $x$ not kept constant by $\phi$. More precisely:
+	
+	\begin{center}
+		$\text{supp}(\phi) := \{x \in X; \phi(x)\neq x  \}$.
+	\end{center}
+\end{definition}
+
+\begin{lemma}
+	A simple greedy algorithm is able to find the support of a permutation in linear time.	
+\end{lemma}
+
+\begin{proposition}
+	Given a permutation $\phi \in \text{perm}(X)$, where $X$ is a finite set, then there are transpositions $t_j, j=1,...,r$ such that $\phi = \prod t_j$.
+\end{proposition}
+
+\begin{algo}
+	The following is an algorithm to find a decomposition of any permutation $\phi: \bb{Z}_n \raw \bb{Z}_n$ into transpositions.
+	
+	
+	
+\end{algo}
+
+This decomposition is unique, up to rearrangements:
+
+\begin{theorem}
+	Suppose $\prod_1^{m}\alpha_i=\prod_{1}^{n}\beta_j$, where all the $\alpha_i, \beta_j$ are transpositions on some set $X$. Then $n=m$ and there is a permutation $\psi:\bb{Z}_n\raw\bb{Z}_n$ such that $\alpha_i = \beta_{\psi(j)}$.
+\end{theorem}
+\begin{proof}
+	
+\end{proof}
+
+\begin{proposition}
+	The following are equivalent about a decomposition $\phi = \prod_{1}^n\alpha_i$ into transpositions.
+	
+	\begin{enumerate}
+		\item $n$ is even
+	\end{enumerate}
+\end{proposition}
+
+\begin{problem}
+	Let $m, n \in \bb{N}$.
+	\begin{enumerate}
+		\item How many transpositions of size $m$ act on $\bb{Z}_n$?
+		
+		\item 	What are the decompositions of the permutations of $\bb{Z}_n$ into transpositions?
+		
+		\item Create algorithm to generate all the different products of transpositions on $\bb{Z}_n$. Preferably, each product should be generated only once.
+		
+		\item  
+	\end{enumerate}
+	
+	
+\end{problem}
+
+
+
+
+
+
+
+
+
+
+
+\section{Graph Theory}
+
+\begin{definition}
+	A graph is a triple $X=(X^0, X^1, \phi)$ where $X^0, X^1$ are sets whose elements are called $nodes$ and $edges$ respectively, while $\phi:X^1 \raw 2^X$ is a map. 
+\end{definition}
+
+\begin{definition}
+	Let $X=(X^0, X^1, \phi_X)$ be a graph. A subgraph is a graph $Y=(Y^0, Y^1, \phi_Y)$ such that $Y^0\subset X^0$, $Y^1\subset X^1$ and $\phi_X|_{Y^1}=\phi_Y$.
+\end{definition}
+
+\begin{definition}
+	Let $X=(X^0, X^1, \phi_X)$ be a graph.	Given a subset $S^0 \subset X^0$, there is a natural associated subgraph $S$ associated to $S^0$ given by $S=(S^0, S^1, \phi_S)$ where $S^1=\{e \in X^1; \phi(e)\subset S^0 \}$ and $\phi_S := \phi_X|_{S^1}$. This graph is called the graph generated by $S^0$. 
+	
+	Similarly, if $S^1 \subset X^1$, the associated generated graph is given by $(S^0, S^1, \phi_S)$, $S^0=\{x \in X^0; \exists e \in S^1, x \in \phi_X(e)\}$, and again $\phi_S:=\phi_X|_{S^1}$.
+	
+	In each case, the subgraph generated is denoted by $\langle S^0 \rangle_X$ or $\langle S^1 \rangle_X$ accordingly.
+\end{definition}
+
+\begin{exmp}
+	There are some elementary graphs which are very fundamental to all of graph theory, we describe some of them here. Let $n \in \bb{N}$, we define:
+	
+	\begin{enumerate}
+		\item  the path graphs
+		\subitem $P_n^0 = \bb{N}^n_1$
+		\subitem $P_n^1 := \{\{x,x+1\}; x = 1, ..., n-1\}$,
+		
+		\item the cycle graphs
+		\subitem $C_n^0 = \bb{N}^n_1$
+		\subitem $C_n^1 := \{\{x,x+1\}; x = 1, ..., n-1\} \cup \{1, n\}$,
+		
+		\item the complete graphs
+		\subitem $K_n^0 = \bb{N}^n_1$
+		\subitem $K_n^1 = \{xy; 1 \leq x,y \leq n \}$,
+		
+		\item the empty graphs
+		\subitem $0_n^0 = \bb{N}^n_1$
+		\subitem $0_n^1 = \emptyset$,
+		
+		\item the cube graphs
+		\subitem $Q_n^0 = \prod_{1}^{n} \bb{F}_2$
+		\subitem $Q_n^1 = \{\textbf{i}\textbf{j}; \exists 1\leq r\leq n, \ \textbf{j}=\text{tog}_r(\textbf{i})\}$
+		
+		\noindent where 
+		
+		\begin{center}
+			$\text{tog}:\bb{F}_2 \raw \bb{F}_2, \text{tog}(x) = 1-x$ 
+			
+			and $\text{tog}_r = (\prod_1^{r-1}\iota) \times \text{tog} \times (\prod_{r+1}^n \iota)$
+		\end{center}
+		
+	\end{enumerate}
+	
+\end{exmp}
+
+Intuitively, the cube graphs are the graphs whose nodes are binary sequences of size $n$, and two such sequences are neighbors when one differs from the other by a single toggle from $0$ to $1$ or from $1$ to $0$ on some element of the sequence. For example, 
+
+\begin{definition}
+	Let $x \in X^0$. The neighborhood of $x$ in $X$ is defined by 
+	
+	\begin{center}
+		$N_X(x) := \{y \in X^0; xy \in X^1 \}$.
+	\end{center}
+\end{definition}
+
+\begin{exmp}
+	\begin{center}
+		$Q_3^0 = \{000, 001, 010, 011, 100,101,110,111\}$
+		
+		$N_{Q_3}(000) = \{001, 010, 100\}$, $N_{Q_3}(010) = \{000, 110, 011\}$.
+	\end{center}
+	
+\end{exmp}
+
+\begin{definition}
+	A graph homomorphism of graphs $X, Y$ is a map $\phi: X^0 \raw Y^0$ such that for every $x, y \in X^0$ such that $xy \in X^1$, we have $\phi(x)\phi(y) \in Y^1$. In other words, it carries neighbors into neighbors.
+	
+	A graph isomorphism is a bijective graph homomorphism
+\end{definition}
+
+\begin{lemma}
+	The inverse of a graph isomorphism is a graph isomorphism.
+\end{lemma}
+
+\begin{proof}
+	
+\end{proof}
+
+\begin{definition}
+	A path $P$ in a graph $X$ is a subgraph of $X$ isomorphic to a path graph. 
+\end{definition}
+
+\begin{exmp}
+	Let $X = C_n$ the cycle graph of order $n$. Then the subgraph $P^0 = C_n^0$, $P^1 = C_n^1 \setminus \{n, 1\}$ is isomorphic to a path graph.
+\end{exmp}
+
+
+\subsection{Coloring}
+
+
+One of the important properties of graphs is that we can "traverse" a graph by starting at any node, "going through" one edge at a time reaching node after node, provided, naturally, that you can only go through an edge if it is incident on the node you currently occupy, and after going through the edge you will then occupy the other incident node. There are some definitions based on this idea:
+
+\begin{definition}
+	Let $X$ be a graph.
+	
+	\begin{enumerate}
+		\item A walk on $X$ is a finite sequence $w = (x_1, e_1, ..., x_{n}, e_{n}, x_{n+1})$, where the $x_j \in X^0$, $j=1, ..., n+1$ and $e_j \in X^1$, $j=1, ..., n$, and such that for all $j=1,...,n$, $x_j, x_{j+1}$ are the incident nodes on $e_j$. We will also denote $w = x_1e_1...e_nx_{n+1}$ The length of such a walk is $n$, and will be denoted by $\text{len}(w)$.
+		
+		\item A trail is a walk $ w = x_1e_1...e_nx_{n+1}$ such that if $1 \leq j \neq k \leq n$, then $e_j \neq e_k$.
+		
+		\item A path is a walk $w = x_1e_1...e_nx_{n+1}$ such that $1 \leq j \neq k \leq n+1$, then $x_j \neq x_k$ 
+	\end{enumerate}
+\end{definition}
+
+\begin{lemma}
+	Let $X$ be a graph and $w$ be a path on $X$. Then $w$ is also a trail on $X$.
+\end{lemma}
+
+\begin{proof}
+	
+	
+\end{proof}
+
+\begin{definition}
+	The set of all walks of length $n \leq 0$ on a graph $X$ is denoted $X^n$. The set of all walks on $X$ is denoted $X^*$.
+\end{definition}
+
+Notice that there seems to be two meanings to each of the symbols $X^0, X^1$, but the two meanings coincide by equating walks of length $0$ with nodes and walks of length $1$ with edges of the graph, which is a natural procedure.
+
+\begin{definition}
+	Let $X, Y$ be graphs. A cover of $X$ by $Y$ is a partition 
+	
+	\begin{center}
+		$X^0=\bigcup_{j=1}^r Y^0_j$
+	\end{center}
+	
+	\noindent where for each $1 \leq j \leq r$ the subgraph $\langle Y^0_j \rangle_X$ generated by $Y_j^0$ is isomorphic to $Y$.
+\end{definition}
+
+\begin{definition}
+	A very import specific case of cover is the of perfect matching. A perfect matching in $X$ is a cover of $X$ by $K_2$.
+\end{definition}
+
+\begin{definition}
+	A $r$-dimensional grid graph is a graph obtained by the direct product of $r$ path graphs. Symbolically, the grid with parameters $n_1, ..., n_r$ is given by:
+	
+	\begin{center}
+		$\text{Grid}(n_1, ..., n_r) = P_{n_1}\square P_{n_2} \square... \square P_{n_r}$
+	\end{center}
+	
+\end{definition}
+
+\begin{problem}
+	Given two grids $X = \text{Grid}(n_1, ..., n_r)$, $Y = \text{Grid}(m_1, ..., m_s)$, with $r \geq s$, we ask two questions:
+	
+	\begin{enumerate}
+		\item Is there a cover of $X$ by $Y$?
+		
+		\item If so, how many different covers are there?
+	\end{enumerate}	
+\end{problem}
+
+\subsection{Operations on Graphs}
+
+In the section, we describe operations on sets of graphs that yield other graphs. Many important results have proofs using operations such as these. Furthermore they also lead to interesting combinatorial questions. Whenever we apply some operation to some collection of graphs obtaining a graph in the end, we say that this final graph was obtained from the initial collection via the operation.
+
+Let $X, Y$ be graphs. 
+
+\begin{definition}
+	Let $x_0 \in X^0$. We denote by $X \setminus x_0$ the graph obtained by removing $x_0$ from $X^0$, \ie, $(X \setminus x_0)^0 = X^0 \setminus \{x_0\}$, $(X \setminus x_0)^1 = \{e \in X^1; x_0 \ \text{is not incident on e} \}$.
+	
+	Similarly, if $e_0 \in X^1$ we denote $X \setminus e_0$ the graph obtained by removing $e_0$ from $X^1$, \ie, $(X \setminus e_0)^0 = X^0$, $(X \setminus e_0)^1 = X^1 \setminus e_0$.
+\end{definition}
+
+If $Y \leq X$, there is always a way of obtaining $Y$ from $X$ by sequentially deleting nodes and edges, and it is usually the case that there are many ways of doing this sequential procedure.
+
+
+\begin{definition}
+	The cartesian (or box) product of $X$ and $Y$ is denoted by $X \square Y$, and is defined by:
+	
+	\begin{enumerate}
+		\item $(X \square Y)^0 := X^0 \times Y^0$,
+		
+		\item $(X \square Y)^1 := \{(x,y)(x,b); yb  \in Y^1\ \} \cup \{(x,y)(a,y); xa \in X^1\}$.
+	\end{enumerate}
+\end{definition}
+
+\begin{exmp}
+	The grid graphs are defined as 
+	\begin{center}
+		$\text{grid}(n_1, ..., n_r) := P_{n_1}\square ... \square P_{n_r}$.
+	\end{center}
+\end{exmp}
+
+\subsection{Directed Graphs}
+
+
+\subsection{Hypergraphs}
+
+\begin{definition}
+	A Hypergraph is a pair $H=(H^0, H^1, \phi)$ where $H^0, H^1$ are sets and $\phi: H^1 \raw \mathcal{P}(H^0)$ is a map. The elements of $H^0$ are called nodes of $H$ and the elements of $H^1$ are called hyperedges of $H$, whereas the map $\phi$ is called the incidence map.
+	
+	The hypergraph is called simple when $\phi$ is an injection, so that we may consider $H^1 \subset \mathcal{P}(H^0)$.
+\end{definition}
+
+\begin{exmp}
+	The Tic-Tac-Toe hypergraphs are denoted by $TTT = TTT(n_1, ... n_d)$, where $n_1, ..., n_d \in \bb{N}$ and given by 
+	
+	\begin{center}
+		$TTT^0 = [1, n_1]_{\bb{N}}\times...\times[1, n_d]_{\bb{N}}$,
+		
+		$TTT^1 = \{ \boldsymbol{i}_j(x); j=1, ..., d, x=1, ..., n_j \}$, where $\boldsymbol{i}_j(x)=(i_1, ..., i_{j-1}, x, i_{j+1} ..., i_d )$, $i_r$ fixed for all $r\neq j$.
+	\end{center}
+	
+	\subsection{Algorithms}
+	
+	\begin{definition}
+		content...
+	\end{definition}
+	
+	
+	
+	
+\end{exmp}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Order Theory}
+
+\begin{definition}
+	A partial order on a set $X$ is a binary relation $\leq$ satisfying:
+	
+	\begin{itemize}
+		\item (Reflexivity) for all $x \in X$, $x \leq x$,
+		
+		\item (Associativity) if $x, y, z \in X$ are such that $x \leq y$ and $y \leq z$ then $x \leq z$,
+		
+		\item (Antisymmetry) if $x, y \in X$ are such that $x\leq y$ and $y\leq x$, then $x=y$.
+	\end{itemize}
+	
+	A partially ordered set, or poset for convenience, is a pair $(X, \leq)$, where $X$ is a set and $\leq$ is a partial order on $X$.
+\end{definition}
+
+\begin{definition}
+	Let $X, Y$ be posets. An order preserving map from $X$ to $Y$ is a map $\phi:X^0 \raw Y^0$ such that if $x_1 \leq x_2$ in $X$, then $f(x_1) \leq f(x_2)$ in $Y$.
+\end{definition}
+
+\begin{exmp}
+	The canonical example of poset is the set of subsets of some set, or a subset of the power set. More precisely, if $\mathcal{F} \subset 2^X$ is a family of subsets of some set $X$, then $(\mathcal{F}, \subset)$ is a poset.
+	
+\end{exmp}
+
+
+\begin{proposition}
+	The number of partial orders on a set with $x$ is
+\end{proposition}
+
+\begin{lemma}
+	Let $P$ be a finite poset and $P_0 \subset P$. For every $s \in P_0$ there exists an element $\tilde{s}$ such that for every $t \in P$ we have:
+	
+	\begin{enumerate}
+		\item $s \leq \tilde{s}$,
+		
+		\item either $t \leq \tilde{s}$ or $t$ and $s$ are uncomparable.
+	\end{enumerate}
+	
+	In other words, in a poset $P$, every element of $P$ is less or equal to a maximal element.
+\end{lemma}
+
+\begin{proof}
+	
+	
+\end{proof}
+
+\begin{coro}
+	If $X$ is a set and $\mathcal{F} \subset 2^X$ is a set of subsets of $X$, then there is a $Y \in \mathcal{F}$ such that $X \subset Y$ and if $Z \in F$ then either $Z \subset Y$ or $Z$ and $Y$ are uncomparable. In other words, every subset is contained in a maximal subset with respect to $\mathcal{F}$.
+\end{coro}
+
+
+
+
+
+
